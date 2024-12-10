@@ -1,0 +1,97 @@
+%%Identification
+%%The package identifies itself and the LaTeX version needed
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{penarandaY}[2024/05/12 Yohan's package]
+
+%%Requeiried packages and preliminary definitions, needed by the options
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{amsmath}
+\RequirePackage{esint} %for example : \oiint
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{physics}
+\RequirePackage{gensymb}%for ° symbole
+\RequirePackage{authblk}%author
+\RequirePackage{geometry}
+\RequirePackage{changepage}
+\RequirePackage{empheq}
+\newgeometry{
+    top=3cm,
+    bottom=2cm,
+    outer=2cm,
+    inner=2cm,
+}
+
+\usepackage[backend=biber,style=numeric,sorting=ydnt]{biblatex} %Imports biblatex package
+\addbibresource{sources.bib} %Import the bibliography file
+
+\RequirePackage{pdfpages} % input pdf
+
+\RequirePackage{subcaption}
+\RequirePackage{lipsum}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=red,
+    pdftitle={Thesis}
+}
+\RequirePackage{multicol}
+\RequirePackage{fancyhdr, lastpage}
+%\RequirePackage[Conny]{fncychap} Not compatible with appendix!
+%Option : Sonny ; Lenny ; Glenn ; Conny ; Rejne ; Bjarne ; Bjornstrup
+\RequirePackage{xcolor}
+\RequirePackage{tikz}
+\RequirePackage{pgf}
+\RequirePackage{pgfplots}
+\RequirePackage[most]{tcolorbox}
+
+\RequirePackage{minted}
+%\RequirePackage[acronym]{glossaries-extra}
+\setabbreviationstyle[acronym]{long-short}
+
+\pgfplotsset{compat=1.18}
+
+\definecolor{theoremColor}{RGB}{0,0,0}
+\definecolor{definitionColor}{RGB}{21,56,5}
+\definecolor{propositionColor}{RGB}{98,5,5}
+\definecolor{exampleColor}{RGB}{100,100,100}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\renewcommand{\footrulewidth}{1pt}
+
+\usemintedstyle{borland}
+
+\numberwithin{equation}{section}
+
+%%Body
+\newtcbtheorem{thm}{Theorem}{
+  breakable,
+  colframe = theoremColor,
+  colback = blue!10
+}{thm}
+
+\newtcbtheorem{defs}{Definition}{
+  breakable,
+  colframe = definitionColor,
+  colback = blue!10
+}{defs}
+
+\newtcbtheorem{props}{Proposition}{
+  breakable,
+  colframe = propositionColor,
+  colback = blue!10
+}{props}
+
+\newtcbtheorem{exmpl}{Example}{
+  breakable,
+  colframe = exampleColor,
+  colback = blue!10
+}{exmpl}
+
+\usepackage{datetime}
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+
