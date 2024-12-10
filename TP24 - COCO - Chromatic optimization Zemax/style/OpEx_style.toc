@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{}%
+\contentsline {section}{\numberline {2}\texttt {opex3.sty} and required \LaTeX {} packages}{2}{}%
+\contentsline {section}{\numberline {3}Figures, tables, and multimedia}{3}{}%
+\contentsline {section}{\numberline {4}Mathematical and scientific notation}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Displayed equations}{3}{}%
+\contentsline {subsection}{\numberline {4.2}Inline math}{3}{}%
+\contentsline {subsection}{\numberline {4.3}General guidelines on notation}{4}{}%
+\contentsline {subsection}{\numberline {4.4}Acknowledgments}{4}{}%
+\contentsline {section}{\numberline {5}References}{4}{}%
+\contentsline {subsection}{\numberline {5.1}Formatting reference items}{4}{}%
+\contentsline {subsection}{\numberline {5.2}Formatting reference citations}{6}{}%
+\contentsline {subsection}{\numberline {5.3}Bib\TeX }{6}{}%
+\contentsline {section}{\numberline {6}Conclusion}{6}{}%
