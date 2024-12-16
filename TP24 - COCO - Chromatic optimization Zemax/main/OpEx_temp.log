@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.16)  16 DEC 2024 17:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.16)  16 DEC 2024 17:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -468,64 +468,59 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--58
+Underfull \hbox (badness 10000) in paragraph at lines 59--62
 
  []
 
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 85.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 89.
 (C:\Users\yohpe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<../Pictures/Layout.png, id=16, 610.53094pt x 188.20313pt>
-File: ../Pictures/Layout.png Graphic file (type png)
-<use ../Pictures/Layout.png>
-Package pdftex.def Info: ../Pictures/Layout.png  used on input line 89.
-(pdftex.def)             Requested size: 274.73637pt x 84.69061pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 
 [1
 
 {C:/Users/yohpe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-<../Pictures/ThroughFocusSpotDiagram.png, id=34, 1163.84813pt x 873.2625pt>
+<../Pictures/Layout.png, id=29, 610.53094pt x 188.20313pt>
+File: ../Pictures/Layout.png Graphic file (type png)
+<use ../Pictures/Layout.png>
+Package pdftex.def Info: ../Pictures/Layout.png  used on input line 93.
+(pdftex.def)             Requested size: 274.73637pt x 84.69061pt.
+<../Pictures/ThroughFocusSpotDiagram.png, id=33, 1163.84813pt x 873.2625pt>
 File: ../Pictures/ThroughFocusSpotDiagram.png Graphic file (type png)
 <use ../Pictures/ThroughFocusSpotDiagram.png>
-Package pdftex.def Info: ../Pictures/ThroughFocusSpotDiagram.png  used on input line 102.
+Package pdftex.def Info: ../Pictures/ThroughFocusSpotDiagram.png  used on input line 106.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/LongitudinalAberration.png, id=35, 1163.84813pt x 873.2625pt>
+<../Pictures/LongitudinalAberration.png, id=34, 1163.84813pt x 873.2625pt>
 File: ../Pictures/LongitudinalAberration.png Graphic file (type png)
 <use ../Pictures/LongitudinalAberration.png>
-Package pdftex.def Info: ../Pictures/LongitudinalAberration.png  used on input line 107.
+Package pdftex.def Info: ../Pictures/LongitudinalAberration.png  used on input line 111.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
 
 
-LaTeX Warning: Reference `' on page 2 undefined on input line 111.
+LaTeX Warning: Reference `' on page 2 undefined on input line 115.
 
-<../Pictures/FFTMTF_blue.png, id=36, 1163.84813pt x 873.2625pt>
+<../Pictures/FFTMTF_blue.png, id=35, 1163.84813pt x 873.2625pt>
 File: ../Pictures/FFTMTF_blue.png Graphic file (type png)
 <use ../Pictures/FFTMTF_blue.png>
-Package pdftex.def Info: ../Pictures/FFTMTF_blue.png  used on input line 118.
+Package pdftex.def Info: ../Pictures/FFTMTF_blue.png  used on input line 122.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/FFTMTF_green.png, id=37, 1163.84813pt x 873.2625pt>
+<../Pictures/FFTMTF_green.png, id=36, 1163.84813pt x 873.2625pt>
 File: ../Pictures/FFTMTF_green.png Graphic file (type png)
 <use ../Pictures/FFTMTF_green.png>
-Package pdftex.def Info: ../Pictures/FFTMTF_green.png  used on input line 123.
+Package pdftex.def Info: ../Pictures/FFTMTF_green.png  used on input line 127.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/FFTMTF_red.png, id=38, 1163.84813pt x 873.2625pt>
+<../Pictures/FFTMTF_red.png, id=37, 1163.84813pt x 873.2625pt>
 File: ../Pictures/FFTMTF_red.png Graphic file (type png)
 <use ../Pictures/FFTMTF_red.png>
-Package pdftex.def Info: ../Pictures/FFTMTF_red.png  used on input line 128.
+Package pdftex.def Info: ../Pictures/FFTMTF_red.png  used on input line 132.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-(OpEx_temp.lof)
+(OpEx_temp.lof
+
+[2 <../Pictures/Layout.png> <../Pictures/ThroughFocusSpotDiagram.png> <../Pictures/LongitudinalAberration.png> <../Pictures/FFTMTF_blue.png> <../Pictures/FFTMTF_green.png> <../Pictures/FFTMTF_red.png>])
 \tf@lof=\write4
 \openout4 = `OpEx_temp.lof'.
 
 
-
-[2 <../Pictures/Layout.png> <../Pictures/ThroughFocusSpotDiagram.png> <../Pictures/LongitudinalAberration.png> <../Pictures/FFTMTF_blue.png> <../Pictures/FFTMTF_green.png> <../Pictures/FFTMTF_red.png>]
 
 [3] (OpEx_temp.aux)
  ***********
@@ -542,13 +537,13 @@ Package rerunfilecheck Info: File `OpEx_temp.out' has not changed.
 Here is how much of TeX's memory you used:
  12015 strings out of 473650
  195129 string characters out of 5717934
- 604939 words of memory out of 5000000
+ 605939 words of memory out of 5000000
  34885 multiletter control sequences out of 15000+600000
  590737 words of font info for 96 fonts, out of 8000000 for 9000
  1201 hyphenation exceptions out of 8191
  75i,9n,79p,961b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on OpEx_temp.pdf (3 pages, 441513 bytes).
+Output written on OpEx_temp.pdf (3 pages, 442009 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  14 named destinations out of 1000 (max. 500000)
