@@ -65,7 +65,7 @@ This study introduces optimization through optical design softwares such as Zema
 
 \end{abstract*}
 
-\ocis{(000.0000) General.} % REPLACE WITH CORRECT OCIS CODES FOR YOUR ARTICLE
+%\ocis{(000.0000) General.} % REPLACE WITH CORRECT OCIS CODES FOR YOUR ARTICLE
 
 %%%%%%%%%%%%%%%%%%%%%%% References %%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thebibliography}{99}
@@ -86,7 +86,7 @@ Here, we will focus on system modelling and optimization. In the first section w
 
 \section{Design simulation}
 
-We work with the file \texttt{add-on-zemax.zmx} which provides a simple design, composed of an add-on and a paraxial lens. The add-on is composed of two different type of glass, separated by a spherical surface of radius $R$. It is this surface that will be optimized later on. The layout is presented on Fig. \ref{fig:layout}, and thhe chromatic aberration can already be seen to the experimented eye.
+We work with the file \texttt{add-on-zemax.zmx} which provides a simple design, composed of an add-on and a paraxial lens. The add-on is composed of two different type of glass, separated by a spherical surface of radius $R$. It is this surface that will be optimized later on. The layout is presented on Fig. \ref{fig:layout}, and the chromatic aberration can already be seen to the experimented eye.
 
 \begin{figure}[h]
 	\centering
@@ -112,7 +112,7 @@ We presented the analysis made with the tools provided by Zemax, the through foc
 	\caption{Chromatic aberration of the initial system}
 \end{figure}
 
-Thanks to thoses analysis, we can have a first estimate of the chromatic aberration : the longitudinal aberration is $\numprint[mm]{0.68}$ and this is confirmed by the geometric MTF computed with Zemax, as can be seen on Fig. \ref{}.
+Thanks to thoses analysis, we can have a first estimate of the chromatic aberration : the longitudinal aberration is $\numprint[mm]{0.68}$ and this is confirmed by the geometric MTF computed with Zemax, as can be seen on Fig. \ref{fig:fft-colors}.
 \begin{figure}[h]
     \centering
     \subfloat[MTF (Blue channel)]{
@@ -131,8 +131,10 @@ Thanks to thoses analysis, we can have a first estimate of the chromatic aberrat
         \label{fig:fft-red}
     }
 	\caption{MTF of different channels }
+    \label{fig:fft-colors}
 \end{figure}
 
+The sensor position considered in this study is $x'_0 = \numprint[m]{2}$. The Spot Diagram figures allow the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue are respectively $RMS_R = \numprint[\mu m]{35.987}$, $RMS_G = \numprint[\mu m]{2.951}$, and $RMS_B = \numprint[\mu m]{37.183}$.
 \section{Optimization for HFR post-processing}
 
 
