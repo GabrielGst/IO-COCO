@@ -1,0 +1,23 @@
+
+\paragraph{Variation of the Refractive Index\\}
+The refractive indices of the two glasses in the visible spectrum are plotted on the same graph (see Fig. \ref{fig:index}). The expected observation is that the refractive indices of the two materials vary differently across the visible spectrum. This indicates chromatic dispersion, where different wavelengths are refracted at different angles. We observe an intersection point, where both index are equal. We know that means the power of the doublet will be infinite for this specific value of both indices.
+
+
+\paragraph{Variation of the Focal Length\\}
+We writes a function that calculates the focal length of the doublet for a given wavelength range and a curvature radius \(R\), and used it to computes the focal length over the visible spectrum. The focal length variation should be plotted for \(R = 20 \, \text{mm}\). The plot presented on Fig. \ref{fig:focal} will highlight the sensitivity of the lens system to different wavelengths, leading to the corresponding defocus.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Refractive index variation]{
+        \centering
+        \includegraphics[width=0.4\textwidth]{indices.png}
+        \label{fig:index}
+    }
+	\subfloat[Focal length variation]{
+		\centering
+        \includegraphics[width=0.4\textwidth]{focale_doublet.png}
+        \label{fig:focal}
+    }
+	\caption{Effect of wavelength dependent refractive index association}
+\end{figure}
+

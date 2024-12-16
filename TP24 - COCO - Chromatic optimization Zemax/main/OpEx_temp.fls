@@ -1,8 +1,8 @@
-PWD c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/not sync/TP COCO 3/main
+PWD c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/not sync/TP COCO 3/main/OpEx_temp.tex
+INPUT c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex
 OUTPUT OpEx_temp.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -206,6 +206,14 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
+INPUT ../Pictures/Layout.png
+INPUT ../Pictures/Layout.png
+INPUT ../Pictures/Layout.png
+INPUT ../Pictures/Layout.png
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -222,87 +230,45 @@ INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
-INPUT ../Pictures/Original picture.png
-INPUT ../Pictures/Original picture.png
-INPUT ../Pictures/Original picture.png
-INPUT ../Pictures/Original picture.png
+INPUT ../Pictures/ThroughFocusSpotDiagram.png
+INPUT ../Pictures/ThroughFocusSpotDiagram.png
+INPUT ../Pictures/ThroughFocusSpotDiagram.png
+INPUT ../Pictures/ThroughFocusSpotDiagram.png
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
-INPUT ../Pictures/Final EDOF.png
-INPUT ../Pictures/Final EDOF.png
-INPUT ../Pictures/Final EDOF.png
-INPUT ../Pictures/Final EDOF.png
-INPUT ../Pictures/Channels Original and Blured DOF.png
-INPUT ../Pictures/Channels Original and Blured DOF.png
-INPUT ../Pictures/Channels Original and Blured DOF.png
-INPUT ../Pictures/Channels Original and Blured DOF.png
-INPUT ../Pictures/Channels Gradient Norms (orig vs smothed).png
-INPUT ../Pictures/Channels Gradient Norms (orig vs smothed).png
-INPUT ../Pictures/Channels Gradient Norms (orig vs smothed).png
-INPUT ../Pictures/Channels Gradient Norms (orig vs smothed).png
-INPUT ../Pictures/Channels High Freq.png
-INPUT ../Pictures/Channels High Freq.png
-INPUT ../Pictures/Channels High Freq.png
-INPUT ../Pictures/Channels High Freq.png
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7v.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT ../Pictures/EDOF channels.png
-INPUT ../Pictures/EDOF channels.png
-INPUT ../Pictures/EDOF channels.png
-INPUT ../Pictures/EDOF channels.png
-INPUT ../Pictures/EDOF channels zoomed.png
-INPUT ../Pictures/EDOF channels zoomed.png
-INPUT ../Pictures/EDOF channels zoomed.png
-INPUT ../Pictures/EDOF channels zoomed.png
-INPUT ../Pictures/PSF variating EDOF RGB.png
-INPUT ../Pictures/PSF variating EDOF RGB.png
-INPUT ../Pictures/PSF variating EDOF RGB.png
-INPUT ../Pictures/PSF variating EDOF RGB.png
+INPUT ../Pictures/LongitudinalAberration.png
+INPUT ../Pictures/LongitudinalAberration.png
+INPUT ../Pictures/LongitudinalAberration.png
+INPUT ../Pictures/LongitudinalAberration.png
+INPUT ../Pictures/FFTMTF_blue.png
+INPUT ../Pictures/FFTMTF_blue.png
+INPUT ../Pictures/FFTMTF_blue.png
+INPUT ../Pictures/FFTMTF_blue.png
+INPUT ../Pictures/FFTMTF_green.png
+INPUT ../Pictures/FFTMTF_green.png
+INPUT ../Pictures/FFTMTF_green.png
+INPUT ../Pictures/FFTMTF_green.png
+INPUT ../Pictures/FFTMTF_red.png
+INPUT ../Pictures/FFTMTF_red.png
+INPUT ../Pictures/FFTMTF_red.png
+INPUT ../Pictures/FFTMTF_red.png
 INPUT ./OpEx_temp.lof
 INPUT ./OpEx_temp.lof
 INPUT OpEx_temp.lof
 OUTPUT OpEx_temp.lof
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
 INPUT OpEx_temp.aux
 INPUT ./OpEx_temp.out
 INPUT ./OpEx_temp.out
-INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
-INPUT c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb

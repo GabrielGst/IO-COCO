@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.25)  9 DEC 2024 17:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.25)  11 DEC 2024 01:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/not sync/TP24 - COCO - Chromatic imaging system/main/OpEx_temp.tex"
-(c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/not sync/TP24 - COCO - Chromatic imaging system/main/OpEx_temp.tex
+**"c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic imaging system/main/OpEx_temp.tex"
+(c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic imaging system/main/OpEx_temp.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -549,49 +549,59 @@ File: ../Pictures/flou_defocalisation_RVB.png Graphic file (type png)
 Package pdftex.def Info: ../Pictures/flou_defocalisation_RVB.png  used on input line 253.
 (pdftex.def)             Requested size: 170.09885pt x 127.52647pt.
  [5 <../Pictures/Ideal_lens.png>]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 266.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 279.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 266.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 279.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-<../Pictures/indices.png, id=105, 421.575pt x 316.0608pt>
+) [6 <../Pictures/flou_defocalisation_conventionnelle.png (PNG copy)> <../Pictures/flou_defocalisation_RVB.png (PNG copy)>]
+<../Pictures/indices.png, id=116, 421.575pt x 316.0608pt>
 File: ../Pictures/indices.png Graphic file (type png)
 <use ../Pictures/indices.png>
-Package pdftex.def Info: ../Pictures/indices.png  used on input line 281.
+Package pdftex.def Info: ../Pictures/indices.png  used on input line 293.
 (pdftex.def)             Requested size: 151.1977pt x 113.35739pt.
-<../Pictures/focale_doublet.png, id=106, 421.575pt x 316.0608pt>
+<../Pictures/focale_doublet.png, id=117, 421.575pt x 316.0608pt>
 File: ../Pictures/focale_doublet.png Graphic file (type png)
 <use ../Pictures/focale_doublet.png>
-Package pdftex.def Info: ../Pictures/focale_doublet.png  used on input line 286.
+Package pdftex.def Info: ../Pictures/focale_doublet.png  used on input line 298.
 (pdftex.def)             Requested size: 151.1977pt x 113.35739pt.
+<../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png, id=118, 421.575pt x 316.0608pt>
+File: ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png Graphic file (type png)
+<use ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png>
+Package pdftex.def Info: ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png  used on input line 313.
+(pdftex.def)             Requested size: 231.86696pt x 173.83397pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6 <../Pictures/flou_defocalisation_conventionnelle.png (PNG copy)> <../Pictures/flou_defocalisation_RVB.png (PNG copy)>]
-File: ../Pictures/flou_defocalisation_RVB.png Graphic file (type png)
-<use ../Pictures/flou_defocalisation_RVB.png>
-Package pdftex.def Info: ../Pictures/flou_defocalisation_RVB.png  used on input line 301.
-(pdftex.def)             Requested size: 316.18047pt x 237.04501pt.
- [7 <../Pictures/indices.png (PNG copy)> <../Pictures/focale_doublet.png (PNG copy)>]
-<../Pictures/R_optimise.png, id=128, 421.575pt x 316.0608pt>
-File: ../Pictures/R_optimise.png Graphic file (type png)
-<use ../Pictures/R_optimise.png>
-Package pdftex.def Info: ../Pictures/R_optimise.png  used on input line 325.
+[7 <../Pictures/indices.png (PNG copy)> <../Pictures/focale_doublet.png (PNG copy)>]
+File: ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png Graphic file (type png)
+<use ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png>
+Package pdftex.def Info: ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png  used on input line 337.
 (pdftex.def)             Requested size: 151.1977pt x 113.35739pt.
-<../Pictures/Ratio_systeme.png, id=129, 421.575pt x 316.0608pt>
+<../Pictures/Ratio_systeme.png, id=133, 421.575pt x 316.0608pt>
 File: ../Pictures/Ratio_systeme.png Graphic file (type png)
 <use ../Pictures/Ratio_systeme.png>
-Package pdftex.def Info: ../Pictures/Ratio_systeme.png  used on input line 330.
+Package pdftex.def Info: ../Pictures/Ratio_systeme.png  used on input line 342.
 (pdftex.def)             Requested size: 151.1977pt x 113.35739pt.
- [8 <../Pictures/R_optimise.png (PNG copy)> <../Pictures/Ratio_systeme.png (PNG copy)>] (./OpEx_temp.lof)
+ [8 <../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png (PNG copy)> <../Pictures/Ratio_systeme.png (PNG copy)>]
+<../Pictures/optimisation_capteur.png, id=141, 421.575pt x 316.0608pt>
+File: ../Pictures/optimisation_capteur.png Graphic file (type png)
+<use ../Pictures/optimisation_capteur.png>
+Package pdftex.def Info: ../Pictures/optimisation_capteur.png  used on input line 356.
+(pdftex.def)             Requested size: 151.1977pt x 113.35739pt.
+<../Pictures/Flou_optimise_capteur.png, id=142, 421.575pt x 316.0608pt>
+File: ../Pictures/Flou_optimise_capteur.png Graphic file (type png)
+<use ../Pictures/Flou_optimise_capteur.png>
+Package pdftex.def Info: ../Pictures/Flou_optimise_capteur.png  used on input line 361.
+(pdftex.def)             Requested size: 151.1977pt x 113.35739pt.
+ [9 <../Pictures/optimisation_capteur.png (PNG copy)> <../Pictures/Flou_optimise_capteur.png (PNG copy)>] (./OpEx_temp.lof)
 \tf@lof=\write4
 \openout4 = `OpEx_temp.lof'.
 
- [9] (./OpEx_temp.aux)
+ [10] (./OpEx_temp.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -600,18 +610,18 @@ Package rerunfilecheck Info: File `OpEx_temp.out' has not changed.
 (rerunfilecheck)             Checksum: E0F919198A53DD202F2BA475D04A01B7;529.
  ) 
 Here is how much of TeX's memory you used:
- 12075 strings out of 474104
- 194234 string characters out of 5747502
+ 12107 strings out of 474104
+ 195752 string characters out of 5747502
  1942496 words of memory out of 5000000
- 34155 multiletter control sequences out of 15000+600000
+ 34184 multiletter control sequences out of 15000+600000
  600772 words of font info for 118 fonts, out of 8000000 for 9000
  1201 hyphenation exceptions out of 8191
- 75i,10n,79p,1083b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,1082b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on OpEx_temp.pdf (9 pages, 6863703 bytes).
+Output written on OpEx_temp.pdf (10 pages, 6923995 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,8 +1,8 @@
-PWD c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/not sync/TP24 - COCO - Chromatic imaging system/main
+PWD c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic imaging system/main
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/not sync/TP24 - COCO - Chromatic imaging system/main/OpEx_temp.tex
+INPUT c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic imaging system/main/OpEx_temp.tex
 OUTPUT OpEx_temp.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -317,28 +317,36 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
-INPUT ../Pictures/indices.png
-INPUT ../Pictures/indices.png
-INPUT ../Pictures/indices.png
-INPUT ../Pictures/indices.png
-INPUT ../Pictures/focale_doublet.png
-INPUT ../Pictures/focale_doublet.png
-INPUT ../Pictures/focale_doublet.png
-INPUT ../Pictures/focale_doublet.png
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
-INPUT ../Pictures/flou_defocalisation_RVB.png
-INPUT ../Pictures/flou_defocalisation_RVB.png
-INPUT ../Pictures/flou_defocalisation_RVB.png
-INPUT ../Pictures/R_optimise.png
-INPUT ../Pictures/R_optimise.png
-INPUT ../Pictures/R_optimise.png
-INPUT ../Pictures/R_optimise.png
+INPUT ../Pictures/indices.png
+INPUT ../Pictures/indices.png
+INPUT ../Pictures/indices.png
+INPUT ../Pictures/indices.png
+INPUT ../Pictures/focale_doublet.png
+INPUT ../Pictures/focale_doublet.png
+INPUT ../Pictures/focale_doublet.png
+INPUT ../Pictures/focale_doublet.png
+INPUT ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png
+INPUT ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png
+INPUT ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png
+INPUT ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png
+INPUT ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png
+INPUT ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png
+INPUT ../Pictures/flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png
 INPUT ../Pictures/Ratio_systeme.png
 INPUT ../Pictures/Ratio_systeme.png
 INPUT ../Pictures/Ratio_systeme.png
 INPUT ../Pictures/Ratio_systeme.png
+INPUT ../Pictures/optimisation_capteur.png
+INPUT ../Pictures/optimisation_capteur.png
+INPUT ../Pictures/optimisation_capteur.png
+INPUT ../Pictures/optimisation_capteur.png
+INPUT ../Pictures/Flou_optimise_capteur.png
+INPUT ../Pictures/Flou_optimise_capteur.png
+INPUT ../Pictures/Flou_optimise_capteur.png
+INPUT ../Pictures/Flou_optimise_capteur.png
 INPUT ./OpEx_temp.lof
 INPUT ./OpEx_temp.lof
 INPUT OpEx_temp.lof

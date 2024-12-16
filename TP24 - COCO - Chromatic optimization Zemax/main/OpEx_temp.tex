@@ -39,7 +39,7 @@
 \begin{document}
 
 %%%%%%%%%%%%%%%%%% title page information %%%%%%%%%%%%%%%%%%
-\title{Chromatic Objective Design for Extended Depth of Focus \textit{(EDOF)}}
+\title{Chromatic Objective Optimization for Extended Depth of Focus \textit{(EDOF)}}
 
 \author{M. Gostiaux Gabriel, M. Yohan Penaranda}
 
@@ -53,11 +53,11 @@
 %% [use \begin{abstract*}...\end{abstract*} if exempt from copyright]
 
 \begin{abstract*}
-This study introduces basic concepts of co-design to optimize parameters of a chromatic imaging system dedicaetd to EDOF using high-frequency transfer algorithm to enhance RGB image resolution.
-\linebreak
+This study introduces optimization through optical design softwares such as Zemax Optic Studio to basic concepts of co-design. The optimization can be monitored with matlab via the Zemax OS API, in order to optimize parameters of a chromatic imaging system dedicated to EDOF. In the end, the image will be post-processed using high-frequency transfer algorithm to enhance RGB image resolution.
+\hfill \break
 
-\textbf{Keywords:} EDOF, high frequency transfer, chromatic imaging system.
-\linebreak
+\textbf{Keywords:} EDOF, high frequency transfer, chromatic imaging system, Zemax OS API, Matlab.
+
 
 \end{abstract*}
 
@@ -78,116 +78,73 @@ Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, {\b
 \section{Introduction}
 One of the many objectives of co-design is to simulate optical designs in order to optimize costs through reducing the number of elements of the optical chain of a system. It is also possible to replace costly elements with hybrid ones, integrating signal and image processing in the system.
 
-Here, we will focus on two methods for extended depth of focus. The first section deals with the design of a EDOF algorithm which uses high frenquency transfer, applied to real images acquired with a chromatic imaging system. The second section will dive into the modelling of such a chromatic system. We will see how optimizing the curvature radius and the focus, can be monitored by the criteria of maximizing the range within which at least one of the channels is resolved. This is actually equivalent to maximizeing the union of the depth of focus of the three RGB channels of a chromatic camera within a range of interest.
+Here, we will focus on system modelling and optimization. In the first section we will see how using an optical design software helps with the modelling of such a chromatic system. We will see how optimizing the curvature radius and the focus, can be monitored by the criteria of maximizing the range within which at least one of the channels is resolved. Again, this is actually equivalent to maximizeing the union of the depth of focus of the three RGB channels of a chromatic camera within a range of interest. Thhis generalized depth of focus (GDOF) will be computed in matlab through the Zemax OS API.  In the second section we will dive into the optimization of the chromatic system in the purpose of using it with the HFR algorithm. Thus, we will optimize it so that each channel have the best Modulation Transfer Function (MTF).
 
-\section{High Frequency Transfer}
-This study introduces basic concepts of co-design to optimize parameters of a chromatic imaging system dedicated to EDOF using high-frequency transfer algorithm to enhance RGB image resolution. The method, presented in \cite{TNT+08}consist in adding to each channel the high frequencies of all the other channels, weighted by the resolution level of each channel. This can be expressed as :
+\section{Design simulation}
 
-\begin{equation}\label{eqn:HFT}
-    y_{c}^{EDOF} = y_{c}^{init} + \alpha . HF_R + \beta . HF_G + \gamma . HF_B
-\end{equation}
-
-\pagebreak
-
-We will see how the resolution can be improved regarding the depth of focus, even after the acquisition of the image. One can see the original picture on fig. \ref{sub@fig:origin} and the enhanced picture on fig. \ref{sub@fig:edof} .
-
-\begin{figure}[h]
-    \centering
-    \subfloat[Original picture]{
-        \centering
-        \includegraphics[width=0.3\textwidth]{Original picture.png}
-        \label{fig:origin}
-    }
-	\subfloat[Optimized pîcture]{
-		\centering
-        \includegraphics[width=0.3\textwidth]{Final EDOF.png}
-        \label{fig:edof}
-    }
-	\caption{High Frequency Transfer}
-\end{figure}
-
-We will talk about the multiple improvements in resolution at the end of the section, and focus on presenting the method that led to the EDOF picture.
-
-\subsection*{Coefficient computation}
-We start by separating the three R, G, B channels constituying the image, and we look at them separately : one can figure that the resolution is best for the red channel, and worst for the blue channel. This is caused by chromatic dispersion of glass in the lenses of the optical imaging system.
+We work with the file \texttt{add-on-zemax.zmx} which provides a simple design, composed of an add-on and a paraxial lens. The add-on is composed of two different type of glass, separated by a spherical surface of radius $R$. It is this surface that will be optimized later on. The layout is presented on Fig. \ref{fig:layout}, and thhe chromatic aberration can already be seen to the experimented eye.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.45]{Channels Original and Blured DOF.png}
-	\caption{Blured blue and green channels}
-	\label{fig:blured-channels}
+	\includegraphics[scale=0.45]{Layout.png}
+	\caption{System layout}
+	\label{fig:layout}
 \end{figure}
 
-Let us now compute the coefficients $\alpha,\beta,\gamma$ thanks to the expression of the gradients computed on the different channels, according to the formula:
-
-$$
-\begin{aligned}
-\alpha & =\frac{\left\|\Delta_{y_R}\right\|^2}{\left\|\Delta_{y_R}\right\|^2+\left\|\Delta_{y_V}\right\|^2+\left\|\Delta_{y_B}\right\|^2} \\ 
-\beta & =\frac{\left\|\Delta_{y_V}\right\|^2}{\left\|\Delta_{y_R}\right\|^2+\left\|\Delta_{y_V}\right\|^2+\left\|\Delta_{y_B}\right\|^2} \\ 
-\gamma & =\frac{\left\|\Delta_{y_B}\right\|^2}{\left\|\Delta_{y_R}\right\|^2+\left\|\Delta_{y_V}\right\|^2+\left\|\Delta_{y_B}\right\|^2}\end{aligned}
-$$
-
-We apply a mean filter in order to smooth those gradients and work within the surroundings of the details contained in the image.
+We presented the analysis made with the tools provided by Zemax, the through focus spot diagram (TFSD) on Fig. \ref{sub@fig:through-focus} and the longitudinal aberration on Fig. \ref{sub@fig:lon-abe}. The TFSD is interesting because one can see the different focusing planes and the remaining RMS spot size of the other channels in those planes. On the longitudinal aberration, one can observe the focal shift of each channel when variating the field (y axis is the pupil coordinate).
 
 \begin{figure}[h]
     \centering
-    \subfloat[Gradients of each channels]{
+    \subfloat[Through Focus Spot Diagram]{
         \centering
-        \includegraphics[width=0.45\textwidth]{Channels Gradient Norms (orig vs smothed).png}
-        \label{fig:gradients}
+        \includegraphics[width=0.3\textwidth]{ThroughFocusSpotDiagram.png}
+        \label{fig:through-focus}
     }
-	\subfloat[High frequency channels]{
+	\subfloat[Longitudinal Aberration]{
 		\centering
-        \includegraphics[width=0.45\textwidth]{Channels High Freq.png}
-        \label{fig:hfc}
+        \includegraphics[width=0.3\textwidth]{LongitudinalAberration.png}
+        \label{fig:lon-abe}
     }
-	\caption{High Frequency Transfer}
+	\caption{Chromatic aberration of the initial system}
 \end{figure}
 
-Let us then extract the high frequency components of each channels, in order to apply the equation \ref{eqn:HFT} and compute the resolved channels. In this purpose, we compute the convolution of the channels with a large PSF ($s = 50$) to obtain the low frequencies.  We then substract them from the initial channel to obtain the remaining high frequencies, as can be seen on fig. \ref{fig:hfc} .
-
-We thus obtain three corrected channels, as can be seein on fig. \ref{fig:edof-channels} .
-
+Thanks to thoses analysis, we can have a first estimate of the chromatic aberration : the longitudinal aberration is $\numprint[mm]{0.68}$ and this is confirmed by the geometric MTF computed with Zemax, as can be seen on Fig. \ref{}.
 \begin{figure}[h]
     \centering
-    \subfloat[EDOF channels]{
+    \subfloat[MTF (Blue channel)]{
         \centering
-        \includegraphics[width=0.45\textwidth]{EDOF channels.png}
-        \label{fig:edof-channels}
+        \includegraphics[width=0.3\textwidth]{FFTMTF_blue.png}
+        \label{fig:fft-blue}
     }
-	\subfloat[EDOF channels (zoomed)]{
+	\subfloat[MTF (Green channel)]{
 		\centering
-        \includegraphics[width=0.53\textwidth]{EDOF channels zoomed.png}
-        \label{fig:edof-channels-zoomed}
+        \includegraphics[width=0.3\textwidth]{FFTMTF_green.png}
+        \label{fig:fft-green}
     }
-	\caption{High Frequency Transfer}
-\end{figure}
-
-\subsection*{Results and discussion}
-Applying the high frequency transfer algorithm to an image helps improving chromatic defocus, but it also seems to flatten the image by reducing saturation (mostly on the green channel).
-
-In regard of fig. \ref{fig:cutoff} on which are presented the EDOF pictures according to the cutoff frequency of the lowpass filter (which parameter is the size of the PSF), one can see that the effect of the HF transfer is to emphasize the details of the high frequencies which have not been filtered, thus degrading contrast of highly detailed zones over the image (such as the bark of the tree). Thus, one could define a mid-range threshold that would lead to a resolution trade-off between highly-detailed and poorly-detailed zones. One could also apply a different threshold according to a spatial parameter representing the level of detail of one zone in the image.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.25]{PSF variating EDOF RGB.png}
-	\caption{EDOF, variating frequency cutoff}
-	\label{fig:cutoff}
+    \subfloat[MTF (Red channel)]{
+		\centering
+        \includegraphics[width=0.3\textwidth]{FFTMTF_red.png}
+        \label{fig:fft-red}
+    }
+	\caption{MTF of different channels }
 \end{figure}
 
 
+\section{Optimization for HFR post-processing}
 
 
 
-\section{Chromatic Imaging Design}
-\paragraph{Position capteur}
-$$\frac{1}{x'_0} - \frac{1}{x_0} = \frac{1}{f'}$$
-$$x'_0=\frac{1}{\frac{1}{f'} + \frac{1}{x_0}} = \numprint[mm]{25.3}$$
 
-\paragraph{Profondeur de champ}
-$$x_{min} = \frac{x'0}{1-\frac{x'0}{f'} + \frac{t_{px}}{D}} = \numprint[m]{-2.0925}$$
-$$x_{max} = \frac{x'0}{1-\frac{x'0}{f'} - \frac{t_{px}}{D}} = \numprint[m]{-1.9152}$$
-Donc profondeur de champ $\numprint[m]{0.1773}$
+
+
+
+
+
+
+
+
+
+
 \listoffigures
 
 \end{document} 

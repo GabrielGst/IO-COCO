@@ -259,15 +259,27 @@ The function $\operatorname{IsInDoF}$ created before was used to construct a new
 
 To achieve this, the union function, which computes the union of two vectors without repetition, was utilized. Finally, the generalized depth of field for this system was calculated.
 
-The function gives the value of the generalized depth of field for this system, which is ....... and is  consistent with the graphic plotted on Fig. \ref{fig:def-blur}.
-
+The function gives the value of the generalized depth of field for this system, which is $\numprint[m]{0.625}$ and is consistent with the graphic plotted on Fig. \ref{fig:def-blur}.
+Table \ref{tab:prof_champ_RVB} details the calculation of depth of field for the three channels.
+\begin{table}[h] 
+    \centering
+    \begin{tabular}{|l|c|c|c|} \cline{2-4}
+   \multicolumn{1}{c|}{}  &  \multicolumn{3}{c|}{Bornes (m)} \\ \cline{2-4}
+   \multicolumn{1}{c|}{}  &  Rouge  &  Vert & Bleu \\ \hline
+   Minimum & $\numprint{-3.139}$ & $\numprint{-2.093}$ & $\numprint{-1.250}$  \\ \hline
+   Maximum & $\numprint{-2.757}$ & $\numprint{-1.915}$ & $\numprint{-1.184}$ \\ \hline
+   $\Delta x$ & $\numprint{0.381}$ & $\numprint{0.177}$ & $\numprint{0.066}$ \\ \hline
+   Total &  \multicolumn{3}{c|}{$\numprint{0.625}$} \\ \hline
+\end{tabular}
+    \caption{Generalized depth of field detail for three channels. Values are rounded to millimeters.}
+    \label{tab:prof_champ_RVB}
+\end{table}
 
 \subsection*{Chromatic imaging system simulation}
 Enriched by the models previously computed for an ideal lens and a chromatic one, we now consider a chromatic imager, composed of a chromatic doublet and an ideal lens as illustrated in Fig. \ref{fig:ideal-lens}. To model the dispersion effect on thhe visible spectrum, we will be using the provided function \texttt{index\_addon.m} that calculates the refractive index of the two glasses in the doublet for a given wavelength range in µm.
 
 \paragraph{Variation of the Refractive Index\\}
 The refractive indices of the two glasses in the visible spectrum are plotted on the same graph (see Fig. \ref{fig:index}). The expected observation is that the refractive indices of the two materials vary differently across the visible spectrum. This indicates chromatic dispersion, where different wavelengths are refracted at different angles. We observe an intersection point, where both index are equal. We know that means the power of the doublet will be infinite for this specific value of both indices.
-
 
 \paragraph{Variation of the Focal Length\\}
 We writes a function that calculates the focal length of the doublet for a given wavelength range and a curvature radius \(R\), and used it to computes the focal length over the visible spectrum. The focal length variation should be plotted for \(R = 20 \, \text{mm}\). The plot presented on Fig. \ref{fig:focal} will highlight the sensitivity of the lens system to different wavelengths, leading to the corresponding defocus.
@@ -298,7 +310,7 @@ The expected result is a contraction of the doublet's chromatic dispersion throu
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.75]{flou_defocalisation_RVB.png}
+	\includegraphics[scale=0.55]{flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png}
 	\caption{Defocus blur}
 	\label{fig:def-blur-2}
 \end{figure}
@@ -314,13 +326,13 @@ Using the previous functions, the value of the radius of curvature of the double
 
 Those decrease occurs when the depth of focus of one color, blue or red, meets green's depth of focus, resulting in the decrease of the total depth of focus computed by the operator $\operatorname{IsInDoF}$. In the end, only the depth of focus of the green channel remain, as can be seen for $R$ values ranging above $R = \numprint[m]{60}$. In reality, each depth of focus are overlaying. Looking at Fig. \ref{fig:def-blur} and its variation with $R$, we can understand the effect of a change in the difference between the focus of the blue or red channel, and the green one, on the depth of focus of the blue or red channel. Focusing further increases the depth of focus, resulting in the increase of the GDOF, and closer reduces it. However getting closer to green's depth of focus will ultimately results in those two overlaying, resulting on the decrease of the GDOF. That's why we can observe two increases and two decreases.
 
-Ultimately, we choose $R = \numprint[m]{18}$ corresponding to the first maximum of the ratio function as the optimal $R$, and plot on Fig. \ref{fig:curv-opt} the resulting GDOF.
+Ultimately, we choose $R = \numprint[mm]{63}$ corresponding to the second maximum of the ratio function as the optimal $R$, and plot on Fig. \ref{fig:curv-opt} the resulting GDOF. We thus add $\numprint[cm]{6.01}$ to the depth of focus with this method, which represent around 7\% of the previous GDOF.
 
 \begin{figure}[h]
     \centering
     \subfloat[Curvature radius optimization results]{
         \centering
-        \includegraphics[width=0.4\textwidth]{R_optimise.png}
+        \includegraphics[width=0.4\textwidth]{flou_defocalisation_doublet_lentille_conventionnelle_RVB_optimise.png}
         \label{fig:curv-opt}
     }
 	\subfloat[Ratio]{
@@ -332,14 +344,33 @@ Ultimately, we choose $R = \numprint[m]{18}$ corresponding to the first maximum 
 \end{figure}
 
 \paragraph{Optimizing the Position of the Sensor}
-Further optimization can be achieved by adjusting the position of the detector. The optimal result for the pair \((R, x_0^{\prime})\) should be analyzed. This configuration will provide the best balance between chromatic aberration and image sharpness, enhancing the overall image quality.
+Locking the curvature radius at its optimised position allows the scan of the position of the detector to maximise the ratio function. This scan is plot Fig. \ref{fig:optimisation_capteur} and shows a maximum for $\numprint[mm]{25.1}$. For this value, the GDOF changes from $\numprint[cm]{46}$ to $\numprint[m]{1.92}$ which is 400\% more than the radius-optimized setup However this is the potential depth of focus after post-processing with HFR algorithm.
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[GDOF ratio, function of detector position]{
+        \centering
+        \includegraphics[width=0.4\textwidth]{optimisation_capteur.png}
+        \label{fig:optimisation_capteur}
+    }
+	\subfloat[Final EDOF GDOF]{
+		\centering
+        \includegraphics[width=0.4\textwidth]{Flou_optimise_capteur.png}
+        \label{fig:edof-gdof}
+    }
+	\caption{Curvature radius optimization}
+\end{figure}
+
+%Further optimization can be achieved by adjusting the position of the detector. The optimal result for the pair \((R, x_0^{\prime})\) should be analyzed. This configuration will provide the best balance between chromatic aberration and image sharpness, enhancing the overall image quality.
 
 
 \section{Conclusion}
 We presented the post-processing algorithm and the corresponding optical design, and presented the optimization of that design. We saw the impact of the radius of curvature of a chromatic doublet onto the generalized depth of focus, taken as a criteria of image sharpness. The post-processing highlighted the High frequencies Transfer method, that equalized the depth of focus of the green and blue channels, resulting in a global R,G,B improved sharpness. Conceptually, post-processing algorithm will lead to better results when the GDOF is maximum, because a maximum of details (high frequencies components) will be resolved among the three color channels. So, if ones only want improve sharpness in the red spectrum, one can then maximize the red depth of foccus, regardless of the green's.
 
-The optimization focused on two parameters, the radius of curvature between the two glasses, and the location of the detector. however we saw in optical design courses, that correcting chromatic aberration often uses the right combination of glasses. Optimization can thus integrate material choices, and ultimately, conic parameters of surfaces too.
+The optimization focused on two parameters, the radius of curvature between the two glasses, and the location of the detector. These two parameters enabled an enhancement of post-processed depth of focus of around 400\%.A possible way of improvement can be found in optical design courses, where correcting chromatic aberration often uses the right combination of glasses. Optimization can thus integrate material choices, and ultimately, conic parameters of surfaces too.
 
+\pagebreak
 
 \listoffigures
 
