@@ -118,7 +118,7 @@ We presented the analysis made with the tools provided by Zemax, the through foc
 	\caption{Chromatic aberration of the initial system}
 \end{figure}
 
-Thanks to thoses analysis, we can have a first estimate of the chromatic aberration : the longitudinal aberration is $\numprint[mm]{0.68}$ and this is confirmed by the geometric MTF computed with Zemax, as can be seen on Fig. \ref{fig:fft-colors}.
+Thanks to thoses analysis, we can have a first estimate of the chromatic aberration : the longitudinal aberration is $\numprint[mm]{0.68}$ and this is confirmed by the longitudinal aberration diagram computed with Zemax, as can be seen on Fig. \ref{fig:lon-abe}.
 \begin{figure}[h]
     \centering
     \subfloat[MTF (Blue channel)]{
@@ -160,6 +160,51 @@ The function \texttt{get_RMS_SpotSize.m} was used to directly interface with an 
 \end{verbatim}
 
 here, we first define the object too camera distance, then perform a quick focus and retrieve the RMS radii for the red, green, and blue channels. They were found to be $RMS_R = \numprint[\mu m]{35.987}$, $RMS_G = \numprint[\mu m]{2.951}$, and $RMS_B = \numprint[\mu m]{37.183}$, respectively. This confirms that the system optimizes the focal plane to match the focal plane of the green channel, as it is the most sensitive for the human eye.
+
+The sensor position considered in this study is $x'_0 = \numprint[mm]{28.9}$. The Spot Diagram fig.\ref{fig:Spot_diagram_2} allows the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue are respectively $RMS_R = \numprint[\mu m]{48.942}$, $RMS_G = \numprint[\mu m]{3.999}$, and $RMS_B = \numprint[\mu m]{50.889}$. This values can be compared after applying a quick focus by the software at the same position for the object : $RMS_R_{bf} = \numprint[\mu m]{42.330}$, $RMS_G_{bf} = \numprint[\mu m]{3.050}$, and $RMS_B_{bf} = \numprint[\mu m]{57.688}$, displayed fig.\ref{fig:Spot_diagram_bf}. The best focus affects slighty the green channel, enhances the red channel and degrades the blue one.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[MTF (Blue channel)]{
+        \centering
+        \includegraphics[width=0.3\textwidth]{SpotDiagram2_blue.png}
+        \label{fig:spot_blue}
+    }
+	\subfloat[MTF (Green channel)]{
+		\centering
+        \includegraphics[width=0.3\textwidth]{SpotDiagram2_green.png}
+        \label{fig:spot_green}
+    }
+    \subfloat[MTF (Red channel)]{
+		\centering
+        \includegraphics[width=0.3\textwidth]{SpotDiagram2_red.png}
+        \label{fig:spot_red}
+    }
+	\caption{Spot diagram of different channels }
+    \label{fig:Spot_diagram_2}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \subfloat[MTF (Blue channel)]{
+        \centering
+        \includegraphics[width=0.3\textwidth]{SpotDiagram2_blue_bef_QF.png}
+        \label{fig:spot_blue}
+    }
+	\subfloat[MTF (Green channel)]{
+		\centering
+        \includegraphics[width=0.3\textwidth]{SpotDiagram2_green_bef_QF.png}
+        \label{fig:spot_green}
+    }
+    \subfloat[MTF (Red channel)]{
+		\centering
+        \includegraphics[width=0.3\textwidth]{SpotDiagram2_red_bef_QF.png}
+        \label{fig:spot_red}
+    }
+	\caption{Spot diagram of different channels with best focus}
+    \label{fig:Spot_diagram_bf}
+\end{figure}
+
 
 \section{Optimization for HFR post-processing}
 

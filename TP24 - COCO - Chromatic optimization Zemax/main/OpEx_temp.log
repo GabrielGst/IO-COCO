@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.25)  15 JAN 2025 21:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.25)  15 JAN 2025 21:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -512,7 +512,7 @@ File: ../Pictures/LongitudinalAberration.png Graphic file (type png)
 Package pdftex.def Info: ../Pictures/LongitudinalAberration.png  used on input line 117.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
 
-LaTeX Warning: Reference `fig:fft-colors' on page 2 undefined on input line 121.
+LaTeX Warning: Reference `fig:lon-abe' on page 2 undefined on input line 121.
 
 <../Pictures/FFTMTF_blue.png, id=25, 1163.84813pt x 873.2625pt>
 File: ../Pictures/FFTMTF_blue.png Graphic file (type png)
@@ -532,63 +532,66 @@ Package pdftex.def Info: ../Pictures/FFTMTF_red.png  used on input line 138.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:148: Missing $ inserted.
-<inserted text> 
-                $
-l.148 The function \texttt{get_RMS_SpotSize.m}
-                                               was used to directly interfac...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:148: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.148 The function \texttt{get_RMS_SpotSize.m}
-                                               was used to directly interfac...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:149: Missing $ inserted.
-<inserted text> 
-                $
-l.149 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (1090.34108pt too wide) in paragraph at lines 148--149
-\OT1/ptm/m/n/10 The func-tion \OT1/pcr/m/n/10 get$[]\OML/ztmcm/m/it/10 MS[]potSize:mwasusedtodirectlyinterfacewithaninstanceofZemaxfromMatlabtoextracttheRMSSpotSize:ThisfunctionwasmodifiedtoretrievethisvalueforthethreechannelsR; G; andB; forthesystemwithafocusthatminimizestheRMSspotsize\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 QuickFocus\OT1/ztmcm/m/n/10 )\OML/ztmcm/m/it/10 :TheresultswereobtainedforacurvatureradiuscorrespondingtotheoneusedintheZemaxfile:$ 
- []
-
 [2 <../Pictures/Layout.png> <../Pictures/ThroughFocusSpotDiagram.png> <../Pictures/LongitudinalAberration.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-[]\OT1/pcr/m/n/10 here, we first define the object too camera distance, then
- []
+
+LaTeX Warning: Reference `fig:Spot_diagram_2' on page 3 undefined on input line 161.
+
+c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:161: Double subscript.
+l.161 ...he same position for the object : $RMS_R_
+                                                  {bf} = \numprint[\mu m]{42...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:161: Double subscript.
+l.161 ...{bf} = \numprint[\mu m]{42.330}$, $RMS_G_
+                                                  {bf} = \numprint[\mu m]{3....
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:161: Double subscript.
+l.161 ...} = \numprint[\mu m]{3.050}$, and $RMS_B_
+                                                  {bf} = \numprint[\mu m]{57...
+I treat `x_1_2' essentially like `x_1{}_2'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-\OT1/pcr/m/n/10 perform a quick focus and retrieve the RMS radii for the red,
- []
+LaTeX Warning: Reference `fig:Spot_diagram_bf' on page 3 undefined on input line 161.
 
+<../Pictures/SpotDiagram2_blue.png, id=42, 1163.84813pt x 873.2625pt>
+File: ../Pictures/SpotDiagram2_blue.png Graphic file (type png)
+<use ../Pictures/SpotDiagram2_blue.png>
+Package pdftex.def Info: ../Pictures/SpotDiagram2_blue.png  used on input line 169.
+(pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
+<../Pictures/SpotDiagram2_green.png, id=43, 1163.84813pt x 873.2625pt>
+File: ../Pictures/SpotDiagram2_green.png Graphic file (type png)
+<use ../Pictures/SpotDiagram2_green.png>
+Package pdftex.def Info: ../Pictures/SpotDiagram2_green.png  used on input line 174.
+(pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
+<../Pictures/SpotDiagram2_red.png, id=44, 1163.84813pt x 873.2625pt>
+File: ../Pictures/SpotDiagram2_red.png Graphic file (type png)
+<use ../Pictures/SpotDiagram2_red.png>
+Package pdftex.def Info: ../Pictures/SpotDiagram2_red.png  used on input line 179.
+(pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
+<../Pictures/SpotDiagram2_blue_bef_QF.png, id=45, 1163.84813pt x 873.2625pt>
+File: ../Pictures/SpotDiagram2_blue_bef_QF.png Graphic file (type png)
+<use ../Pictures/SpotDiagram2_blue_bef_QF.png>
+Package pdftex.def Info: ../Pictures/SpotDiagram2_blue_bef_QF.png  used on input line 190.
+(pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
+<../Pictures/SpotDiagram2_green_bef_QF.png, id=46, 1163.84813pt x 873.2625pt>
+File: ../Pictures/SpotDiagram2_green_bef_QF.png Graphic file (type png)
+<use ../Pictures/SpotDiagram2_green_bef_QF.png>
+Package pdftex.def Info: ../Pictures/SpotDiagram2_green_bef_QF.png  used on input line 195.
+(pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
+<../Pictures/SpotDiagram2_red_bef_QF.png, id=47, 1163.84813pt x 873.2625pt>
+File: ../Pictures/SpotDiagram2_red_bef_QF.png Graphic file (type png)
+<use ../Pictures/SpotDiagram2_red_bef_QF.png>
+Package pdftex.def Info: ../Pictures/SpotDiagram2_red_bef_QF.png  used on input line 200.
+(pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
 
-Underfull \hbox (badness 3612) in paragraph at lines 162--163
-\OML/ztmcm/m/it/10 RMS[] \OT1/ztmcm/m/n/10 = 2[]951[][]$\OT1/pcr/m/n/10 , and $\OML/ztmcm/m/it/10 RMS[] \OT1/ztmcm/m/n/10 = 37[]183[][]$\OT1/pcr/m/n/10 , respectively. This confirms
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-\OT1/pcr/m/n/10 that the system optimizes the focal plane to match the focal
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 No file OpEx_temp.lof.
 \tf@lof=\write4
 \openout4 = `OpEx_temp.lof'.
 
-[3 <../Pictures/FFTMTF_blue.png> <../Pictures/FFTMTF_green.png> <../Pictures/FFTMTF_red.png>] (./OpEx_temp.aux)
+[3 <../Pictures/FFTMTF_blue.png> <../Pictures/FFTMTF_green.png> <../Pictures/FFTMTF_red.png> <../Pictures/SpotDiagram2_blue.png> <../Pictures/SpotDiagram2_green.png> <../Pictures/SpotDiagram2_red.png>] [4 <../Pictures/SpotDiagram2_blue_bef_QF.png> <../Pictures/SpotDiagram2_green_bef_QF.png> <../Pictures/SpotDiagram2_red_bef_QF.png>] (./OpEx_temp.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -608,24 +611,20 @@ Package rerunfilecheck Warning: File `OpEx_temp.out' has changed.
 Package rerunfilecheck Info: Checksums for `OpEx_temp.out':
 (rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  2743400BB580D6FCA3A593A47E9FD09C;1145.
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 148 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 11883 strings out of 474104
- 189274 string characters out of 5747502
+ 11945 strings out of 474104
+ 191616 string characters out of 5747502
  1940496 words of memory out of 5000000
- 34013 multiletter control sequences out of 15000+600000
- 595411 words of font info for 107 fonts, out of 8000000 for 9000
+ 34074 multiletter control sequences out of 15000+600000
+ 594896 words of font info for 105 fonts, out of 8000000 for 9000
  1201 hyphenation exceptions out of 8191
- 75i,9n,79p,1004b,634s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on OpEx_temp.pdf (3 pages, 476433 bytes).
+ 75i,9n,79p,1004b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on OpEx_temp.pdf (4 pages, 798187 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 115 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
