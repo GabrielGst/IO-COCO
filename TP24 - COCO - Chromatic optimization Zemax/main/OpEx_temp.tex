@@ -145,9 +145,6 @@ The sensor position considered in this study is $x'_0 = \numprint[m]{2}$. The Sp
 
 
 \subsection{GDOF computation driven through Matlab with ZOS API}
-The function \texttt{get_RMS_SpotSize.m} was used to directly interface with an instance of Zemax from Matlab to extract the RMS Spot Size. This function was modified to retrieve this value for the three channels R, G, and B, for the system with a focus that minimizes the RMS spot size (Quick Focus). The results were obtained for a curvature radius corresponding to the one used in the Zemax file.
-
-
 \begin{verbatim}
     Surf_0.Thickness = 2000;
     QuickFocus = TheSystem.Tools.OpenQuickFocus();
