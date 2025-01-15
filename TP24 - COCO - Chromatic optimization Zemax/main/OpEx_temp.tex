@@ -82,9 +82,15 @@ Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, {\b
 \section{Introduction}
 One of the many objectives of co-design is to simulate optical designs in order to optimize costs through reducing the number of elements of the optical chain of a system. It is also possible to replace costly elements with hybrid ones, integrating signal and image processing in the system.
 
-Here, we will focus on system modelling and optimization. In the first section we will see how using an optical design software helps with the modelling of such a chromatic system. We will see how optimizing the curvature radius and the focus, can be monitored by the criteria of maximizing the range within which at least one of the channels is resolved. Again, this is actually equivalent to maximizeing the union of the depth of focus of the three RGB channels of a chromatic camera within a range of interest. Thhis generalized depth of focus (GDOF) will be computed in matlab through the Zemax OS API.  In the second section we will dive into the optimization of the chromatic system in the purpose of using it with the HFR algorithm. Thus, we will optimize it so that each channel have the best Modulation Transfer Function (MTF).
+Here, we will focus on system modelling and optimization. In the first section we will see how using an optical design software helps with the modelling of such a chromatic system. We will see how optimizing the curvature radius and the focus, can be monitored by the criteria of maximizing the range within which at least one of the channels is resolved. Again, this is actually equivalent to maximizeing the union of the depth of focus of the three RGB channels of a chromatic camera within a range of interest. This generalized depth of focus (GDOF, \ref{eq:gdof}) will be computed in matlab through the Zemax OS API.  In the second section we will dive into the optimization of the chromatic system in the purpose of using it with the HFR algorithm. Thus, we will optimize it so that each channel have the best Modulation Transfer Function (MTF).
 
-\section{Design simulation}
+\begin{equation}\label{eq:gdof}
+    G D O F=L \cap\left(\cup_{i \in R, V, B} D o F_i\right)
+\end{equation}
+
+
+\section{Co-Design of a Chromatic Imaging System with Zemax OS}
+\subsection{Design simulation}
 
 We work with the file \texttt{add-on-zemax.zmx} which provides a simple design, composed of an add-on and a paraxial lens. The add-on is composed of two different type of glass, separated by a spherical surface of radius $R$. It is this surface that will be optimized later on. The layout is presented on Fig. \ref{fig:layout}, and the chromatic aberration can already be seen to the experimented eye.
 
@@ -112,7 +118,7 @@ We presented the analysis made with the tools provided by Zemax, the through foc
 	\caption{Chromatic aberration of the initial system}
 \end{figure}
 
-Thanks to thoses analysis, we can have a first estimate of the chromatic aberration : the longitudinal aberration is $\numprint[mm]{0.68}$ and this is confirmed by the longitudinal aberration diagram computed with Zemax, as can be seen on Fig. \ref{fig:lon-abe}.
+Thanks to thoses analysis, we can have a first estimate of the chromatic aberration : the longitudinal aberration is $\numprint[mm]{0.68}$ and this is confirmed by the longitudinal aberration diagram computed with Zemax, as can be seen on Fig. \ref{sub@fig:lon-abe}.
 \begin{figure}[h]
     \centering
     \subfloat[MTF (Blue channel)]{
@@ -134,7 +140,31 @@ Thanks to thoses analysis, we can have a first estimate of the chromatic aberrat
     \label{fig:fft-colors}
 \end{figure}
 
+<<<<<<< HEAD
 The sensor position considered in this study is $x'_0 = \numprint[mm]{28.9}$. The Spot Diagram fig.\ref{fig:Spot_diagram_2} allows the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue are respectively $RMS_R = \numprint[\mu m]{48.942}$, $RMS_G = \numprint[\mu m]{3.999}$, and $RMS_B = \numprint[\mu m]{50.889}$. This values can be compared after applying a quick focus by the software at the same position for the object : $RMS_{R_{bf}} = \numprint[\mu m]{42.330}$, $RMS_{G_{bf}} = \numprint[\mu m]{3.050}$, and $RMS_{B_{bf}} = \numprint[\mu m]{57.688}$, displayed fig.\ref{fig:Spot_diagram_bf}. The best focus affects slighty the green channel, enhances the red channel and degrades the blue one.
+=======
+The sensor position considered in this study is $x'_0 = \numprint[m]{2}$. The Spot Diagram figures allow the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue are respectively $RMS_R = \numprint[\mu m]{35.987}$, $RMS_G = \numprint[\mu m]{2.951}$, and $RMS_B = \numprint[\mu m]{37.183}$. Indeed, the system optimizes the focal plane to match the focal plane of the green chanel, as it is the most sensitive for the human eye.
+
+
+
+\subsection{GDOF computation driven through Matlab with ZOS API}
+\begin{verbatim}
+    Surf_0.Thickness = 2000;
+    QuickFocus = TheSystem.Tools.OpenQuickFocus();
+    QuickFocus.RunAndWaitForCompletion();
+    QuickFocus.Close();
+
+    %...
+
+    r0 = [r0, spot_results.SpotData.GetRMSSpotSizeFor(1,1)];
+\end{verbatim}
+
+here, we first define the object too camera distance, then perform a quick focus and retrieve the RMS radii for the red, green, and blue channels. They were found to be $RMS_R = \numprint[\mu m]{35.987}$, $RMS_G = \numprint[\mu m]{2.951}$, and $RMS_B = \numprint[\mu m]{37.183}$, respectively. This confirms that the system optimizes the focal plane to match the focal plane of the green channel, as it is the most sensitive for the human eye.
+
+% The sensor position considered in this study is $x'_0 = \numprint[mm]{28.9}$. The Spot Diagram fig.\ref{fig:Spot_diagram_2} allows the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue are respectively $RMS_R = \numprint[\mu m]{48.942}$, $RMS_G = \numprint[\mu m]{3.999}$, and $RMS_B = \numprint[\mu m]{50.889}$. 
+
+% This values can be compared after applying a quick focus by the software at the same position for the object : $RMS_R_{bf} = \numprint[\mu m]{42.330}$, $RMS_G_{bf} = \numprint[\mu m]{3.050}$, and $RMS_B_{bf} = \numprint[\mu m]{57.688}$, displayed fig.\ref{fig:Spot_diagram_bf}. The best focus affects slighty the green channel, enhances the red channel and degrades the blue one.
+>>>>>>> eb9b7a7b4fd6835af73f3d367d95de8da106e5c9
 
 \begin{figure}[h]
     \centering
