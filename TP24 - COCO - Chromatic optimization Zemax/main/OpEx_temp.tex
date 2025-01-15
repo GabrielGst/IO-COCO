@@ -130,28 +130,28 @@ Thanks to thoses analysis, we can have a first estimate of the chromatic aberrat
         \includegraphics[width=0.3\textwidth]{FFTMTF_red.png}
         \label{fig:fft-red}
     }
-	\caption{MTF of different channels }
+	\caption{MTF of different channels}
     \label{fig:fft-colors}
 \end{figure}
 
-The sensor position considered in this study is $x'_0 = \numprint[mm]{28.9}$. The Spot Diagram fig.\ref{fig:Spot_diagram_2} allows the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue are respectively $RMS_R = \numprint[\mu m]{48.942}$, $RMS_G = \numprint[\mu m]{3.999}$, and $RMS_B = \numprint[\mu m]{50.889}$. This values can be compared after applying a quick focus by the software at the same position for the object : $RMS_R_{bf} = \numprint[\mu m]{42.330}$, $RMS_G_{bf} = \numprint[\mu m]{3.050}$, and $RMS_B_{bf} = \numprint[\mu m]{57.688}$, displayed fig.\ref{fig:Spot_diagram_bf}. The best focus affects slighty the green channel, enhances the red channel and degrades the blue one.
+The sensor position considered in this study is $x'_0 = \numprint[mm]{28.9}$. The Spot Diagram fig.\ref{fig:Spot_diagram_2} allows the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue are respectively $RMS_R = \numprint[\mu m]{48.942}$, $RMS_G = \numprint[\mu m]{3.999}$, and $RMS_B = \numprint[\mu m]{50.889}$. This values can be compared after applying a quick focus by the software at the same position for the object : $RMS_{R_{bf}} = \numprint[\mu m]{42.330}$, $RMS_{G_{bf}} = \numprint[\mu m]{3.050}$, and $RMS_{B_{bf}} = \numprint[\mu m]{57.688}$, displayed fig.\ref{fig:Spot_diagram_bf}. The best focus affects slighty the green channel, enhances the red channel and degrades the blue one.
 
 \begin{figure}[h]
     \centering
-    \subfloat[MTF (Blue channel)]{
+    \subfloat[Spot diagram (Blue channel)]{
         \centering
         \includegraphics[width=0.3\textwidth]{SpotDiagram2_blue.png}
-        \label{fig:spot_blue}
+        \label{fig:spot_blue2}
     }
-	\subfloat[MTF (Green channel)]{
+	\subfloat[Spot diagram (Green channel)]{
 		\centering
         \includegraphics[width=0.3\textwidth]{SpotDiagram2_green.png}
-        \label{fig:spot_green}
+        \label{fig:spot_green2}
     }
-    \subfloat[MTF (Red channel)]{
+    \subfloat[Spot diagram (Red channel)]{
 		\centering
         \includegraphics[width=0.3\textwidth]{SpotDiagram2_red.png}
-        \label{fig:spot_red}
+        \label{fig:spot_red2}
     }
 	\caption{Spot diagram of different channels }
     \label{fig:Spot_diagram_2}
@@ -159,24 +159,26 @@ The sensor position considered in this study is $x'_0 = \numprint[mm]{28.9}$. Th
 
 \begin{figure}[h]
     \centering
-    \subfloat[MTF (Blue channel)]{
+    \subfloat[Spot diagram (Blue channel)]{
         \centering
         \includegraphics[width=0.3\textwidth]{SpotDiagram2_blue_bef_QF.png}
-        \label{fig:spot_blue}
+        \label{fig:spot_blue_bf}
     }
-	\subfloat[MTF (Green channel)]{
+	\subfloat[Spot diagram (Green channel)]{
 		\centering
         \includegraphics[width=0.3\textwidth]{SpotDiagram2_green_bef_QF.png}
-        \label{fig:spot_green}
+        \label{fig:spot_green_bf}
     }
-    \subfloat[MTF (Red channel)]{
+    \subfloat[Spot diagram (Red channel)]{
 		\centering
         \includegraphics[width=0.3\textwidth]{SpotDiagram2_red_bef_QF.png}
-        \label{fig:spot_red}
+        \label{fig:spot_red_bf}
     }
 	\caption{Spot diagram of different channels with best focus}
     \label{fig:Spot_diagram_bf}
 \end{figure}
+
+\subsection{Performance criteria}
 
 
 \section{Optimization for HFR post-processing}
