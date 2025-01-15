@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1736974707.68691 "c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex" "OpEx_temp.pdf" "OpEx_temp" 1736974709.37338 2
+["pdflatex"] 1736975498.57829 "c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex" "OpEx_temp.pdf" "OpEx_temp" 1736975500.25612 0
   "../Pictures/FFTMTF_blue.png" 1733858122 83220 0545d886fcd6c2fc3272db0981b3abf6 ""
   "../Pictures/FFTMTF_green.png" 1733858122 85296 9cf1efa95d3d2a271329aa92e103a10c ""
   "../Pictures/FFTMTF_red.png" 1733858122 83001 05b159ec4307139716ac1f8540b29129 ""
@@ -13,11 +13,11 @@
   "../Pictures/SpotDiagram2_red_bef_QF.png" 1733858122 77355 996896bcf71a3bb304631f8702f3755b ""
   "../Pictures/ThroughFocusSpotDiagram.png" 1733858122 161175 be7e36dd9d6567b6d78350216691d1f0 ""
   "../lib/opex3.sty" 1733858122 10151 aa467090ea3e18fa60c2591a4e133a16 ""
-  "OpEx_temp.aux" 1736974709 4190 19b2112d8bbe63a520dc051780ffb859 "pdflatex"
-  "OpEx_temp.lof" 1736974709 556 a923875517b1af6fc7e5b5091e3acd39 "pdflatex"
-  "OpEx_temp.out" 1736974709 1145 2743400bb580d6fca3a593a47e9fd09c "pdflatex"
-  "OpEx_temp.tex" 1736974690 11015 66ccf690eb5bfd198b8fd2a0a2974916 ""
-  "c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex" 1736974690 11015 66ccf690eb5bfd198b8fd2a0a2974916 ""
+  "OpEx_temp.aux" 1736975500 4190 10e016dad609b047a7aa6d02b61230bf "pdflatex"
+  "OpEx_temp.lof" 1736975500 556 e7c087cea45b4069600900645dcd6487 "pdflatex"
+  "OpEx_temp.out" 1736975500 1145 2743400bb580d6fca3a593a47e9fd09c "pdflatex"
+  "OpEx_temp.tex" 1736975498 11027 50af8d3804293af2e4ecb13cfea90b58 ""
+  "c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex" 1736975498 11027 50af8d3804293af2e4ecb13cfea90b58 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1711319357 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1711319570 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1711319207 960 379cc0019370a9e0208a0a3f949f847a ""

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.25)  15 JAN 2025 21:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.25)  15 JAN 2025 22:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -354,7 +354,26 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count303
 \l__pdf_internal_box=\box55
-) (./OpEx_temp.aux)
+) (./OpEx_temp.aux
+
+LaTeX Warning: Label `fig:spot_blue' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:spot_blue' multiply defined.
+
+
+LaTeX Warning: Label `fig:spot_green' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:spot_green' multiply defined.
+
+
+LaTeX Warning: Label `fig:spot_red' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:spot_red' multiply defined.
+
+)
 \openout1 = `OpEx_temp.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -433,6 +452,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 39.
+ (./OpEx_temp.out) (./OpEx_temp.out)
 \@outlinefile=\write3
 \openout3 = `OpEx_temp.out'.
 
@@ -476,155 +496,106 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
 
-
-LaTeX Warning: Reference `eq:gdof' on page 1 undefined on input line 85.
-
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 95.
 (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-
-LaTeX Warning: Reference `fig:layout' on page 1 undefined on input line 95.
-
-[1
+) [1
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-<../Pictures/Layout.png, id=21, 610.53094pt x 188.20313pt>
+<../Pictures/Layout.png, id=42, 610.53094pt x 188.20313pt>
 File: ../Pictures/Layout.png Graphic file (type png)
 <use ../Pictures/Layout.png>
 Package pdftex.def Info: ../Pictures/Layout.png  used on input line 99.
 (pdftex.def)             Requested size: 274.73637pt x 84.69061pt.
-
-
-LaTeX Warning: Reference `sub@fig:through-focus' on page 2 undefined on input line 104.
-
-
-LaTeX Warning: Reference `sub@fig:lon-abe' on page 2 undefined on input line 104.
-
-<../Pictures/ThroughFocusSpotDiagram.png, id=23, 1163.84813pt x 873.2625pt>
+<../Pictures/ThroughFocusSpotDiagram.png, id=46, 1163.84813pt x 873.2625pt>
 File: ../Pictures/ThroughFocusSpotDiagram.png Graphic file (type png)
 <use ../Pictures/ThroughFocusSpotDiagram.png>
 Package pdftex.def Info: ../Pictures/ThroughFocusSpotDiagram.png  used on input line 112.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/LongitudinalAberration.png, id=24, 1163.84813pt x 873.2625pt>
+<../Pictures/LongitudinalAberration.png, id=47, 1163.84813pt x 873.2625pt>
 File: ../Pictures/LongitudinalAberration.png Graphic file (type png)
 <use ../Pictures/LongitudinalAberration.png>
 Package pdftex.def Info: ../Pictures/LongitudinalAberration.png  used on input line 117.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-
-LaTeX Warning: Reference `fig:lon-abe' on page 2 undefined on input line 121.
-
-<../Pictures/FFTMTF_blue.png, id=25, 1163.84813pt x 873.2625pt>
+<../Pictures/FFTMTF_blue.png, id=49, 1163.84813pt x 873.2625pt>
 File: ../Pictures/FFTMTF_blue.png Graphic file (type png)
 <use ../Pictures/FFTMTF_blue.png>
 Package pdftex.def Info: ../Pictures/FFTMTF_blue.png  used on input line 128.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/FFTMTF_green.png, id=26, 1163.84813pt x 873.2625pt>
+<../Pictures/FFTMTF_green.png, id=50, 1163.84813pt x 873.2625pt>
 File: ../Pictures/FFTMTF_green.png Graphic file (type png)
 <use ../Pictures/FFTMTF_green.png>
 Package pdftex.def Info: ../Pictures/FFTMTF_green.png  used on input line 133.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/FFTMTF_red.png, id=27, 1163.84813pt x 873.2625pt>
+<../Pictures/FFTMTF_red.png, id=51, 1163.84813pt x 873.2625pt>
 File: ../Pictures/FFTMTF_red.png Graphic file (type png)
 <use ../Pictures/FFTMTF_red.png>
 Package pdftex.def Info: ../Pictures/FFTMTF_red.png  used on input line 138.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2 <../Pictures/Layout.png> <../Pictures/ThroughFocusSpotDiagram.png> <../Pictures/LongitudinalAberration.png>]
-
-LaTeX Warning: Reference `fig:Spot_diagram_2' on page 3 undefined on input line 161.
-
-c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:161: Double subscript.
-l.161 ...he same position for the object : $RMS_R_
-                                                  {bf} = \numprint[\mu m]{42...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:161: Double subscript.
-l.161 ...{bf} = \numprint[\mu m]{42.330}$, $RMS_G_
-                                                  {bf} = \numprint[\mu m]{3....
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:161: Double subscript.
-l.161 ...} = \numprint[\mu m]{3.050}$, and $RMS_B_
-                                                  {bf} = \numprint[\mu m]{57...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-
-LaTeX Warning: Reference `fig:Spot_diagram_bf' on page 3 undefined on input line 161.
-
-<../Pictures/SpotDiagram2_blue.png, id=42, 1163.84813pt x 873.2625pt>
+<../Pictures/SpotDiagram2_blue.png, id=63, 1163.84813pt x 873.2625pt>
 File: ../Pictures/SpotDiagram2_blue.png Graphic file (type png)
 <use ../Pictures/SpotDiagram2_blue.png>
-Package pdftex.def Info: ../Pictures/SpotDiagram2_blue.png  used on input line 169.
+Package pdftex.def Info: ../Pictures/SpotDiagram2_blue.png  used on input line 171.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/SpotDiagram2_green.png, id=43, 1163.84813pt x 873.2625pt>
+<../Pictures/SpotDiagram2_green.png, id=64, 1163.84813pt x 873.2625pt>
 File: ../Pictures/SpotDiagram2_green.png Graphic file (type png)
 <use ../Pictures/SpotDiagram2_green.png>
-Package pdftex.def Info: ../Pictures/SpotDiagram2_green.png  used on input line 174.
+Package pdftex.def Info: ../Pictures/SpotDiagram2_green.png  used on input line 176.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/SpotDiagram2_red.png, id=44, 1163.84813pt x 873.2625pt>
+<../Pictures/SpotDiagram2_red.png, id=65, 1163.84813pt x 873.2625pt>
 File: ../Pictures/SpotDiagram2_red.png Graphic file (type png)
 <use ../Pictures/SpotDiagram2_red.png>
-Package pdftex.def Info: ../Pictures/SpotDiagram2_red.png  used on input line 179.
+Package pdftex.def Info: ../Pictures/SpotDiagram2_red.png  used on input line 181.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/SpotDiagram2_blue_bef_QF.png, id=45, 1163.84813pt x 873.2625pt>
+<../Pictures/SpotDiagram2_blue_bef_QF.png, id=66, 1163.84813pt x 873.2625pt>
 File: ../Pictures/SpotDiagram2_blue_bef_QF.png Graphic file (type png)
 <use ../Pictures/SpotDiagram2_blue_bef_QF.png>
-Package pdftex.def Info: ../Pictures/SpotDiagram2_blue_bef_QF.png  used on input line 190.
+Package pdftex.def Info: ../Pictures/SpotDiagram2_blue_bef_QF.png  used on input line 192.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/SpotDiagram2_green_bef_QF.png, id=46, 1163.84813pt x 873.2625pt>
+<../Pictures/SpotDiagram2_green_bef_QF.png, id=67, 1163.84813pt x 873.2625pt>
 File: ../Pictures/SpotDiagram2_green_bef_QF.png Graphic file (type png)
 <use ../Pictures/SpotDiagram2_green_bef_QF.png>
-Package pdftex.def Info: ../Pictures/SpotDiagram2_green_bef_QF.png  used on input line 195.
+Package pdftex.def Info: ../Pictures/SpotDiagram2_green_bef_QF.png  used on input line 197.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/SpotDiagram2_red_bef_QF.png, id=47, 1163.84813pt x 873.2625pt>
+<../Pictures/SpotDiagram2_red_bef_QF.png, id=68, 1163.84813pt x 873.2625pt>
 File: ../Pictures/SpotDiagram2_red_bef_QF.png Graphic file (type png)
 <use ../Pictures/SpotDiagram2_red_bef_QF.png>
-Package pdftex.def Info: ../Pictures/SpotDiagram2_red_bef_QF.png  used on input line 200.
+Package pdftex.def Info: ../Pictures/SpotDiagram2_red_bef_QF.png  used on input line 202.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-No file OpEx_temp.lof.
+ (./OpEx_temp.lof [3 <../Pictures/FFTMTF_blue.png> <../Pictures/FFTMTF_green.png> <../Pictures/FFTMTF_red.png> <../Pictures/SpotDiagram2_blue.png> <../Pictures/SpotDiagram2_green.png> <../Pictures/SpotDiagram2_red.png> <../Pictures/SpotDiagram2_blue_bef_QF.png> <../Pictures/SpotDiagram2_green_bef_QF.png> <../Pictures/SpotDiagram2_red_bef_QF.png>])
 \tf@lof=\write4
 \openout4 = `OpEx_temp.lof'.
 
-[3 <../Pictures/FFTMTF_blue.png> <../Pictures/FFTMTF_green.png> <../Pictures/FFTMTF_red.png> <../Pictures/SpotDiagram2_blue.png> <../Pictures/SpotDiagram2_green.png> <../Pictures/SpotDiagram2_red.png>] [4 <../Pictures/SpotDiagram2_blue_bef_QF.png> <../Pictures/SpotDiagram2_green_bef_QF.png> <../Pictures/SpotDiagram2_red_bef_QF.png>] (./OpEx_temp.aux)
+ [4] (./OpEx_temp.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `OpEx_temp.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `OpEx_temp.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  2743400BB580D6FCA3A593A47E9FD09C;1145.
+Package rerunfilecheck Info: File `OpEx_temp.out' has not changed.
+(rerunfilecheck)             Checksum: 2743400BB580D6FCA3A593A47E9FD09C;1145.
  ) 
 Here is how much of TeX's memory you used:
- 11945 strings out of 474104
- 191616 string characters out of 5747502
+ 11959 strings out of 474104
+ 191819 string characters out of 5747502
  1940496 words of memory out of 5000000
- 34074 multiletter control sequences out of 15000+600000
+ 34082 multiletter control sequences out of 15000+600000
  594896 words of font info for 105 fonts, out of 8000000 for 9000
  1201 hyphenation exceptions out of 8191
- 75i,9n,79p,1004b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,995b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on OpEx_temp.pdf (4 pages, 798187 bytes).
+Output written on OpEx_temp.pdf (4 pages, 797973 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 141 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  20 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
