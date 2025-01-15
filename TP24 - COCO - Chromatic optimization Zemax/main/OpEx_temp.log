@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.25)  15 JAN 2025 20:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.25)  15 JAN 2025 21:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -433,7 +433,6 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 39.
- (./OpEx_temp.out) (./OpEx_temp.out)
 \@outlinefile=\write3
 \openout3 = `OpEx_temp.out'.
 
@@ -477,72 +476,156 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
 
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 89.
+
+LaTeX Warning: Reference `eq:gdof' on page 1 undefined on input line 85.
+
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 95.
 (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<../Pictures/Layout.png, id=17, 610.53094pt x 188.20313pt>
-File: ../Pictures/Layout.png Graphic file (type png)
-<use ../Pictures/Layout.png>
-Package pdftex.def Info: ../Pictures/Layout.png  used on input line 93.
-(pdftex.def)             Requested size: 274.73637pt x 84.69061pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig:layout' on page 1 undefined on input line 95.
 
 [1
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-<../Pictures/ThroughFocusSpotDiagram.png, id=34, 1163.84813pt x 873.2625pt>
+<../Pictures/Layout.png, id=21, 610.53094pt x 188.20313pt>
+File: ../Pictures/Layout.png Graphic file (type png)
+<use ../Pictures/Layout.png>
+Package pdftex.def Info: ../Pictures/Layout.png  used on input line 99.
+(pdftex.def)             Requested size: 274.73637pt x 84.69061pt.
+
+
+LaTeX Warning: Reference `sub@fig:through-focus' on page 2 undefined on input line 104.
+
+
+LaTeX Warning: Reference `sub@fig:lon-abe' on page 2 undefined on input line 104.
+
+<../Pictures/ThroughFocusSpotDiagram.png, id=23, 1163.84813pt x 873.2625pt>
 File: ../Pictures/ThroughFocusSpotDiagram.png Graphic file (type png)
 <use ../Pictures/ThroughFocusSpotDiagram.png>
-Package pdftex.def Info: ../Pictures/ThroughFocusSpotDiagram.png  used on input line 106.
+Package pdftex.def Info: ../Pictures/ThroughFocusSpotDiagram.png  used on input line 112.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/LongitudinalAberration.png, id=35, 1163.84813pt x 873.2625pt>
+<../Pictures/LongitudinalAberration.png, id=24, 1163.84813pt x 873.2625pt>
 File: ../Pictures/LongitudinalAberration.png Graphic file (type png)
 <use ../Pictures/LongitudinalAberration.png>
-Package pdftex.def Info: ../Pictures/LongitudinalAberration.png  used on input line 111.
+Package pdftex.def Info: ../Pictures/LongitudinalAberration.png  used on input line 117.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/FFTMTF_blue.png, id=37, 1163.84813pt x 873.2625pt>
+
+LaTeX Warning: Reference `fig:fft-colors' on page 2 undefined on input line 121.
+
+<../Pictures/FFTMTF_blue.png, id=25, 1163.84813pt x 873.2625pt>
 File: ../Pictures/FFTMTF_blue.png Graphic file (type png)
 <use ../Pictures/FFTMTF_blue.png>
-Package pdftex.def Info: ../Pictures/FFTMTF_blue.png  used on input line 122.
+Package pdftex.def Info: ../Pictures/FFTMTF_blue.png  used on input line 128.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/FFTMTF_green.png, id=38, 1163.84813pt x 873.2625pt>
+<../Pictures/FFTMTF_green.png, id=26, 1163.84813pt x 873.2625pt>
 File: ../Pictures/FFTMTF_green.png Graphic file (type png)
 <use ../Pictures/FFTMTF_green.png>
-Package pdftex.def Info: ../Pictures/FFTMTF_green.png  used on input line 127.
+Package pdftex.def Info: ../Pictures/FFTMTF_green.png  used on input line 133.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
-<../Pictures/FFTMTF_red.png, id=39, 1163.84813pt x 873.2625pt>
+<../Pictures/FFTMTF_red.png, id=27, 1163.84813pt x 873.2625pt>
 File: ../Pictures/FFTMTF_red.png Graphic file (type png)
 <use ../Pictures/FFTMTF_red.png>
-Package pdftex.def Info: ../Pictures/FFTMTF_red.png  used on input line 132.
+Package pdftex.def Info: ../Pictures/FFTMTF_red.png  used on input line 138.
 (pdftex.def)             Requested size: 113.40115pt x 85.07945pt.
- (./OpEx_temp.lof [2 <../Pictures/Layout.png> <../Pictures/ThroughFocusSpotDiagram.png> <../Pictures/LongitudinalAberration.png> <../Pictures/FFTMTF_blue.png> <../Pictures/FFTMTF_green.png> <../Pictures/FFTMTF_red.png>])
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:148: Missing $ inserted.
+<inserted text> 
+                $
+l.148 The function \texttt{get_RMS_SpotSize.m}
+                                               was used to directly interfac...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:148: Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.148 The function \texttt{get_RMS_SpotSize.m}
+                                               was used to directly interfac...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+c:/Users/gabri/OneDrive/Synchro PC/Documents/GitHub/IO-COCO/TP24 - COCO - Chromatic optimization Zemax/main/OpEx_temp.tex:149: Missing $ inserted.
+<inserted text> 
+                $
+l.149 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (1090.34108pt too wide) in paragraph at lines 148--149
+\OT1/ptm/m/n/10 The func-tion \OT1/pcr/m/n/10 get$[]\OML/ztmcm/m/it/10 MS[]potSize:mwasusedtodirectlyinterfacewithaninstanceofZemaxfromMatlabtoextracttheRMSSpotSize:ThisfunctionwasmodifiedtoretrievethisvalueforthethreechannelsR; G; andB; forthesystemwithafocusthatminimizestheRMSspotsize\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 QuickFocus\OT1/ztmcm/m/n/10 )\OML/ztmcm/m/it/10 :TheresultswereobtainedforacurvatureradiuscorrespondingtotheoneusedintheZemaxfile:$ 
+ []
+
+[2 <../Pictures/Layout.png> <../Pictures/ThroughFocusSpotDiagram.png> <../Pictures/LongitudinalAberration.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+[]\OT1/pcr/m/n/10 here, we first define the object too camera distance, then
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+\OT1/pcr/m/n/10 perform a quick focus and retrieve the RMS radii for the red,
+ []
+
+
+Underfull \hbox (badness 3612) in paragraph at lines 162--163
+\OML/ztmcm/m/it/10 RMS[] \OT1/ztmcm/m/n/10 = 2[]951[][]$\OT1/pcr/m/n/10 , and $\OML/ztmcm/m/it/10 RMS[] \OT1/ztmcm/m/n/10 = 37[]183[][]$\OT1/pcr/m/n/10 , respectively. This confirms
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+\OT1/pcr/m/n/10 that the system optimizes the focal plane to match the focal
+ []
+
+No file OpEx_temp.lof.
 \tf@lof=\write4
 \openout4 = `OpEx_temp.lof'.
 
- [3] (./OpEx_temp.aux)
+[3 <../Pictures/FFTMTF_blue.png> <../Pictures/FFTMTF_green.png> <../Pictures/FFTMTF_red.png>] (./OpEx_temp.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
-Package rerunfilecheck Info: File `OpEx_temp.out' has not changed.
-(rerunfilecheck)             Checksum: D8871C8968F87DC4AAC8EEF6C2198A4B;466.
- ) 
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `OpEx_temp.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `OpEx_temp.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  2743400BB580D6FCA3A593A47E9FD09C;1145.
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 148 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
  11883 strings out of 474104
- 189244 string characters out of 5747502
- 1941496 words of memory out of 5000000
+ 189274 string characters out of 5747502
+ 1940496 words of memory out of 5000000
  34013 multiletter control sequences out of 15000+600000
- 594731 words of font info for 104 fonts, out of 8000000 for 9000
+ 595411 words of font info for 107 fonts, out of 8000000 for 9000
  1201 hyphenation exceptions out of 8191
- 75i,9n,79p,981b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on OpEx_temp.pdf (3 pages, 454059 bytes).
+ 75i,9n,79p,1004b,634s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on OpEx_temp.pdf (3 pages, 476433 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 55 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
