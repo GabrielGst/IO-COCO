@@ -96,29 +96,29 @@ We work with the file \texttt{add-on-zemax.zmx} which provides a simple design, 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.45]{Layout.png}
+	\includegraphics[scale=0.6]{Layout.png}
 	\caption{System layout}
 	\label{fig:layout}
 \end{figure}
 
-We presented the analysis made with the tools provided by Zemax, the through focus spot diagram (TFSD) on Fig. \ref{sub@fig:through-focus} and the longitudinal aberration on Fig. \ref{sub@fig:lon-abe}. The TFSD is interesting because one can see the different focusing planes and the remaining RMS spot size of the other channels in those planes. On the longitudinal aberration, one can observe the focal shift of each channel when variating the field (y axis is the pupil coordinate).
+We present the analysis made with the tools provided by Zemax, the through focus spot diagram (TFSD) on Fig. \ref{sub@fig:through-focus} and the longitudinal aberration on Fig. \ref{sub@fig:lon-abe}. The TFSD is interesting because one can see the different focusing planes and the remaining RMS spot size of the other channels in those planes. On the longitudinal aberration, one can observe the focal shift of each channel when variating the field (y axis is the pupil coordinate).
 
 \begin{figure}[h]
     \centering
     \subfloat[Through Focus Spot Diagram]{
         \centering
-        \includegraphics[width=0.3\textwidth]{ThroughFocusSpotDiagram.png}
+        \includegraphics[width=0.4\textwidth]{ThroughFocusSpotDiagram.png}
         \label{fig:through-focus}
     }
 	\subfloat[Longitudinal Aberration]{
 		\centering
-        \includegraphics[width=0.3\textwidth]{LongitudinalAberration.png}
+        \includegraphics[width=0.4\textwidth]{LongitudinalAberration.png}
         \label{fig:lon-abe}
     }
 	\caption{Chromatic aberration of the initial system}
 \end{figure}
 
-Thanks to thoses analysis, we can have a first estimate of the chromatic aberration : the longitudinal aberration is $\numprint[mm]{0.68}$ and this is confirmed by the longitudinal aberration diagram computed with Zemax, as can be seen on Fig. \ref{sub@fig:lon-abe}.
+Thanks to these analysis, we can have a first estimation of the chromatic aberration: the longitudinal aberration is $\numprint[mm]{0.68}$ and this is confirmed by the longitudinal aberration diagram computed with Zemax, as can be seen on Fig. \ref{sub@fig:lon-abe}.
 \begin{figure}[h]
     \centering
     \subfloat[MTF (Blue channel)]{
@@ -141,10 +141,17 @@ Thanks to thoses analysis, we can have a first estimate of the chromatic aberrat
 \end{figure}
 
 \paragraph{Initial configuration\\}
-The sensor position considered in this study is $x'_0 = \numprint[mm]{19.160}$. The Spot Diagram figures allow the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue are respectively $RMS_R = \numprint[\mu m]{42.210}$, $RMS_G = \numprint[\mu m]{3.063}$, and $RMS_B = \numprint[\mu m]{57.572}$. Indeed, the system optimizes the focal plane to match the focal plane of the green chanel, as it is the most sensitive for the human eye.
+The sensor position considered in this study is $x'_0 = \numprint[mm]{19.160}$. The Spot Diagram figures allows the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue channels are respectively $RMS_R = \numprint[\mu m]{42.210}$, $RMS_G = \numprint[\mu m]{3.063}$, and $RMS_B = \numprint[\mu m]{57.572}$. Indeed, the system optimizes the focal plane to match the focal plane of the green chanel, as it is the most sensitive for the human eye. The panchromatic ($RMS_{init} = \numprint[\mu m]{41.129}$) gives a rough idea of the overall performance of the system and is given in the spot diagram fig.\ref{fig:Spot_diag_init}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{IO25_TP4_SpotDiagram_init_2000.png}
+    \caption{Spot diagram of the initial system.}
+    \label{fig:Spot_diag_init}
+\end{figure}
 
 \paragraph{After quick focus\\} \label{manual-qf}
-A quick focus (Optimize > Manual Adjustment > Quick Focus, option “Spot Size Radial” without “Use centroid”) is performed. The new sensor position is $x'_0 = \numprint[mm]{19.103}$. The new Spot Diagrams gives, for red, green, and blue, respectively $RMS_R = \numprint[\mu m]{48.827}$, $RMS_G = \numprint[\mu m]{3.991}$, and $RMS_B = \numprint[\mu m]{50.769}$. However, the overall RMS radius is relatively smaller, from $RMS_{init} = \numprint[\mu m]{41.129}$ to $RMS_{QF} = \numprint[\mu m]{40.633}$.
+A quick focus (Optimize $>$ Manual Adjustment $>$ Quick Focus, option “Spot Size Radial” without “Use centroid”) is performed. The new sensor position is $x'_0 = \numprint[mm]{19.103}$. The new Spot Diagrams gives, for red, green, and blue, respectively $RMS_R = \numprint[\mu m]{48.827}$, $RMS_G = \numprint[\mu m]{3.991}$, and $RMS_B = \numprint[\mu m]{50.769}$. However, the overall RMS radius is relatively smaller, from $RMS_{init} = \numprint[\mu m]{41.129}$ to $RMS_{QF} = \numprint[\mu m]{40.633}$.
 
 
 
@@ -152,7 +159,9 @@ A quick focus (Optimize > Manual Adjustment > Quick Focus, option “Spot Size R
 
 The function get\textunderscore RMS\textunderscore SpotSize.m was used to directly interface with an instance of Zemax from Matlab to extract the RMS Spot Size. 
 
-This function was modified to retrieve this value for the three channels R, G, and B, for the system with a focus that minimizes the RMS spot size (Quick Focus). The results were obtained for a curvature radius corresponding to the one used in the Zemax file, which is $R_c= \numprint[mm]{8}$.
+This function was modified to retrieve this value for the three channels R, G, and B, for the system with a focus that minimizes the RMS spot size (Quick Focus). The results were obtained for a curvature radius corresponding to the one used in the Zemax file, which is $R= \numprint[mm]{8}$. 
+
+A piece of the code used follows:
 
 \begin{verbatim}
     % Value of the radius of curvature
@@ -174,54 +183,13 @@ This function was modified to retrieve this value for the three channels R, G, a
     r0 = [r0, spot_results.SpotData.GetRMSSpotSizeFor(1,1)];
 \end{verbatim}
 
-Here, we first define the object to camera distance, then perform a quick focus and retrieve the RMS radii for the red, green, and blue channels. They were found to be $RMS_R = \numprint[\mu m]{41.623}$, $RMS_G = \numprint[\mu m]{4.089}$, and $RMS_B = \numprint[\mu m]{41.557}$, respectively. In the matlab file, the ray density is set to 6 with an hexapolar distribution, while the manual analysis have been performed with a ray density of 9 and dithered distribution, which explain the difference with \ref{manual-qf}.
-
-\begin{figure}[h]
-    \centering
-    \subfloat[Spot diagram (Blue channel)]{
-        \centering
-        \includegraphics[width=0.3\textwidth]{SpotDiagram2_blue.png}
-        \label{fig:spot_blue2}
-    }
-	\subfloat[Spot diagram (Green channel)]{
-		\centering
-        \includegraphics[width=0.3\textwidth]{SpotDiagram2_green.png}
-        \label{fig:spot_green2}
-    }
-    \subfloat[Spot diagram (Red channel)]{
-		\centering
-        \includegraphics[width=0.3\textwidth]{SpotDiagram2_red.png}
-        \label{fig:spot_red2}
-    }
-	\caption{Spot diagram of different channels }
-    \label{fig:Spot_diagram_2}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \subfloat[Spot diagram (Blue channel)]{
-        \centering
-        \includegraphics[width=0.3\textwidth]{SpotDiagram2_blue_bef_QF.png}
-        \label{fig:spot_blue_bf}
-    }
-	\subfloat[Spot diagram (Green channel)]{
-		\centering
-        \includegraphics[width=0.3\textwidth]{SpotDiagram2_green_bef_QF.png}
-        \label{fig:spot_green_bf}
-    }
-    \subfloat[Spot diagram (Red channel)]{
-		\centering
-        \includegraphics[width=0.3\textwidth]{SpotDiagram2_red_bef_QF.png}
-        \label{fig:spot_red_bf}
-    }
-	\caption{Spot diagram of different channels with best focus}
-    \label{fig:Spot_diagram_bf}
-\end{figure}
+Here, we first define the object to camera distance, then perform a quick focus and retrieve the RMS radii for the red, green, and blue channels. They were found to be $RMS_R = \numprint[\mu m]{41.623}$, $RMS_G = \numprint[\mu m]{4.089}$, and $RMS_B = \numprint[\mu m]{41.557}$, respectively. In the matlab file, the ray density is set to 6 with an hexapolar distribution, while the manual analysis have been performed with a ray density of 9 and dithered distribution, which explain the difference with paragraph \ref{manual-qf}. When the parameters are the same, the RMS are equal with matlab and manually. This shows that the RMS value depends strongly on the algorithm used and the parameters. Thus, every RMS are computed with the same parameters in the following.
 
 \subsection{Performance criterion}
 The performance criterion under optimisation is the Generalized Depth of Field (GDOF), which is defined as the range along the optical axis where the defocus remains below a threshold equivalent to the size of one pixel (5$\mu$m).
 
-To evaluate the GDOF, we utilize the Root Mean Square (RMS) Spot Size, derived from the spot diagrams of geometrical ray tracing performed using the software. The RMS Spot Size serves as a metric for quantifying the spatial spread of rays at the image plane. A smaller RMS Spot Size corresponds to tighter convergence of rays, leading to reduced defocus and, consequently, an increased depth of field.
+To evaluate the GDOF, we can utilize the RMS spot size, derived from the spot diagrams of geometrical ray tracing performed using the software. It serves as a metric for quantifying the spatial spread of rays at the image plane. A smaller RMS Spot Size corresponds to tighter convergence of rays, leading to reduced defocus and, consequently, an increased depth of field.
+Following, a piece of code used:
 
 \begin{verbatim}
     % We set the pixel pitch threshold
@@ -238,11 +206,34 @@ To evaluate the GDOF, we utilize the Root Mean Square (RMS) Spot Size, derived f
     disp(gdof)
 \end{verbatim}
 
-The computed GDOF is $GDOF = \numprint[mm]{825}$ with quick focus performed for an object at $GDOF = \numprint[m]{2000}$. This value can be also read on ......... .
+The computed value is $GDOF = \numprint[mm]{825}$ with quick focus performed for an object at $x_0 = \numprint[mm]{2000}$ and $R= \numprint[mm]{8}$. This value can be also see on fig.\ref{fig:gdof_init}. In this case, only the green chanel contributes to the GDOF.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{IO25_TP4_GDOF_init_2000_R8.png}
+    \caption{RMS radius of different colors depending on the distance of the object. The GDOF is the sum of the 3 independant depth of focus.}
+    \label{fig:gdof_init}
+\end{figure}
+
+By modifying the radius of curvature of the surface, we are able to determine the best radius, giving the largest GDOF. The plot of GDOF according to the radius is shown fig.\ref{fig:gdof_opti}. We are aware that the curve does not correspond to the expactation. We did not manage to process the data that would gives the real representation. However, the actual value for the best radius is known to be $R_{opti}=\numprint[mm]{63}$, according to the analysis from past labworks.
+
+With this new radius, the GDOF is at its maximum and the RMS spot size of each channels are displayed fig.\ref{fig:matlab_gdof}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{IO25_TP4_optim_R_QF_2000.png}
+    \caption{GDOF as a function of the radius. This curve should be interpreted with caution, as it does not accurately represent the real behavior. However, it has been included in the report as it is a result obtained through our experimental efforts.}
+    \label{fig:gdof_opti}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{matlab_gdof.png}
+    \caption{RMS radius of each wavelenght depending on the distance of the object. With $R_{opti}=\numprint[mm]{63}$.}
+    \label{fig:matlab_gdof}
+\end{figure}
 
 \section{Optimization for HFR post-processing}
-
-
 
 
 
