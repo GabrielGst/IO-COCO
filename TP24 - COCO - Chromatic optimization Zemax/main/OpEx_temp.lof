@@ -2,6 +2,8 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Chromatic aberration of the initial system}}{2}{figure.caption.3}%
 \contentsline {figure}{\numberline {3}{\ignorespaces MTF of different channels}}{3}{figure.caption.4}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Spot diagram of the initial system.}}{3}{figure.caption.6}%
-\contentsline {figure}{\numberline {5}{\ignorespaces RMS radius of different colors depending on the distance of the object. The GDOF is the sum of the 3 independant depth of focus.}}{5}{figure.caption.8}%
-\contentsline {figure}{\numberline {6}{\ignorespaces GDOF as a function of the radius. This curve should be interpreted with caution, as it does not accurately represent the real behavior. However, it has been included in the report as it is a result obtained through our experimental efforts.}}{6}{figure.caption.9}%
-\contentsline {figure}{\numberline {7}{\ignorespaces RMS radius of each wavelenght depending on the distance of the object. With $R_{opti}=\numprint [mm]{63}$.}}{7}{figure.caption.10}%
+\contentsline {figure}{\numberline {5}{\ignorespaces RMS radius of different colors depending on the distance of the object. The GDOF is the sum of the 3 independant depth of focus.}}{4}{figure.caption.8}%
+\contentsline {figure}{\numberline {6}{\ignorespaces GDOF as a function of the radius. This curve should be interpreted with caution, as it does not accurately represent the real behavior. However, it has been included in the report as it is a result obtained through our experimental efforts.}}{5}{figure.caption.9}%
+\contentsline {figure}{\numberline {7}{\ignorespaces RMS radius of each wavelenght depending on the distance of the object. With $R_{opti}=\numprint [mm]{63}$.}}{6}{figure.caption.10}%
+\contentsline {figure}{\numberline {8}{\ignorespaces MTF of the green channel}}{7}{figure.caption.11}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Screen shot of the merit function.}}{7}{figure.caption.12}%

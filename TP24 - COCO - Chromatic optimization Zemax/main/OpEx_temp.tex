@@ -51,7 +51,7 @@
 
 \email{yohan.penaranda@institutoptique.fr} %% email address is required
 
-%\homepage{https://github.com/GabrielGst?tab=repositories} %% author's URL, if desired
+\homepage{https://github.com/GabrielGst?tab=repositories} %% author's URL, if desired
 
 %%%%%%%%%%%%%%%%%%% abstract and OCIS codes %%%%%%%%%%%%%%%%
 %% [use \begin{abstract*}...\end{abstract*} if exempt from copyright]
@@ -145,7 +145,7 @@ The sensor position considered in this study is $x'_0 = \numprint[mm]{19.160}$. 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{IO25_TP4_SpotDiagram_init_2000.png}
+    \includegraphics[width=0.7\textwidth]{IO25_TP4_SpotDiagram_init_2000.png}
     \caption{Spot diagram of the initial system.}
     \label{fig:Spot_diag_init}
 \end{figure}
@@ -159,8 +159,9 @@ A quick focus (Optimize $>$ Manual Adjustment $>$ Quick Focus, option “Spot Si
 
 The function get\textunderscore RMS\textunderscore SpotSize.m was used to directly interface with an instance of Zemax from Matlab to extract the RMS Spot Size. 
 
-This function was modified to retrieve this value for the three channels R, G, and B, for the system with a focus that minimizes the RMS spot size (Quick Focus). The results were obtained for a curvature radius corresponding to the one used in the Zemax file, which is $R= \numprint[mm]{8}$. 
+This function was modified to retrieve this value for the three channels R, G, and B, for the system with a focus that minimizes the RMS spot size (Quick Focus). The results were obtained for a curvature radius corresponding to the one used in the Zemax file, which is $R= \numprint[mm]{8}$.
 
+\pagebreak
 A piece of the code used follows:
 
 \begin{verbatim}
@@ -173,7 +174,8 @@ A piece of the code used follows:
     % We set the object distance to 2 meters
     Surf_0.Thickness = 2000;
 
-    % We perform a quick focus before retrieving RMS spot values
+    % We perform a quick focus before retrieving RMS spot
+    % values
     QuickFocus = TheSystem.Tools.OpenQuickFocus();
     QuickFocus.RunAndWaitForCompletion();
     QuickFocus.Close();
@@ -184,6 +186,13 @@ A piece of the code used follows:
 \end{verbatim}
 
 Here, we first define the object to camera distance, then perform a quick focus and retrieve the RMS radii for the red, green, and blue channels. They were found to be $RMS_R = \numprint[\mu m]{41.623}$, $RMS_G = \numprint[\mu m]{4.089}$, and $RMS_B = \numprint[\mu m]{41.557}$, respectively. In the matlab file, the ray density is set to 6 with an hexapolar distribution, while the manual analysis have been performed with a ray density of 9 and dithered distribution, which explain the difference with paragraph \ref{manual-qf}. When the parameters are the same, the RMS are equal with matlab and manually. This shows that the RMS value depends strongly on the algorithm used and the parameters. Thus, every RMS are computed with the same parameters in the following.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\textwidth]{IO25_TP4_GDOF_init_2000_R8.png}
+    \caption{RMS radius of different colors depending on the distance of the object. The GDOF is the sum of the 3 independant depth of focus.}
+    \label{fig:gdof_init}
+\end{figure}
 
 \subsection{Performance criterion}
 The performance criterion under optimisation is the Generalized Depth of Field (GDOF), which is defined as the range along the optical axis where the defocus remains below a threshold equivalent to the size of one pixel (5$\mu$m).
@@ -202,29 +211,27 @@ Following, a piece of code used:
     R = result(2,:)<pp;
     V = result(3,:)<pp;
     B = result(4,:)<pp;
-    gdof = (sum(R(:) == 1) + sum(V(:) == 1) + sum(B(:) == 1) ) * dx;
+    gdof = (sum(R(:) == 1) + sum(V(:) == 1) + sum(B(:) == 1) )
+         * dx;
     disp(gdof)
 \end{verbatim}
 
 The computed value is $GDOF = \numprint[mm]{825}$ with quick focus performed for an object at $x_0 = \numprint[mm]{2000}$ and $R= \numprint[mm]{8}$. This value can be also see on fig.\ref{fig:gdof_init}. In this case, only the green chanel contributes to the GDOF.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{IO25_TP4_GDOF_init_2000_R8.png}
-    \caption{RMS radius of different colors depending on the distance of the object. The GDOF is the sum of the 3 independant depth of focus.}
-    \label{fig:gdof_init}
-\end{figure}
+
 
 By modifying the radius of curvature of the surface, we are able to determine the best radius, giving the largest GDOF. The plot of GDOF according to the radius is shown fig.\ref{fig:gdof_opti}. We are aware that the curve does not correspond to the expactation. We did not manage to process the data that would gives the real representation. However, the actual value for the best radius is known to be $R_{opti}=\numprint[mm]{63}$, according to the analysis from past labworks.
 
-With this new radius, the GDOF is at its maximum and the RMS spot size of each channels are displayed fig.\ref{fig:matlab_gdof}
-
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{IO25_TP4_optim_R_QF_2000.png}
+    \includegraphics[width=0.5\textwidth]{IO25_TP4_optim_R_QF_2000.png}
     \caption{GDOF as a function of the radius. This curve should be interpreted with caution, as it does not accurately represent the real behavior. However, it has been included in the report as it is a result obtained through our experimental efforts.}
     \label{fig:gdof_opti}
 \end{figure}
+
+With this new radius, the GDOF is at its maximum and the RMS spot size of each channels are displayed fig.\ref{fig:matlab_gdof}
+
+
 
 \begin{figure}[h]
     \centering
@@ -233,19 +240,48 @@ With this new radius, the GDOF is at its maximum and the RMS spot size of each c
     \label{fig:matlab_gdof}
 \end{figure}
 
+Following this optimization, one could also perform an optimization on the detetor's position. Indeed, the quick focus only optimizes the RMS spot radius according to one wavelength, the green channel here. Thus one could follow the same method to find the best position, understood as the one that maximizes the GDOF. This would be done by varying the detector position, and computing the GDOF for each configuration. By plotting the resulting surface, one could find the best pair of values (curvature radius, detector position). However, we did not manage to perform this optimization.
+
 \section{Optimization for HFR post-processing}
+\subsection{Frequential analysis}
+With the optimized system, one can now observe the resulting spot diagrams and MTF. Here, we compare the respective MTF of the green channel before and after the optimization, performed only on the curvature radius. The MTF of the green channel is shown on fig.\ref{fig:fft-green-end-tot}.
 
+\begin{figure}[h]
+    \centering
+    \subfloat[MTF before optimization]{
+        \centering
+        \includegraphics[width=0.45\textwidth]{FFTMTF_green.png}
+        \label{fig:fft-green-end}
+    }
+	\subfloat[MTF after optimization]{
+		\centering
+        \includegraphics[width=0.45\textwidth]{GeometricMTF_freq_green_2000.png}
+        \label{fig:fft-green-end-best}
+    }
+	\caption{MTF of the green channel}
+    \label{fig:fft-green-end-tot}
+\end{figure}
 
+The MTF of the green channel is significantly improved after the optimization. The modulus of the MTF is now close to 0.5 for a frequency of 77 cycles/mm, when it was closed to 0.5 for 60 cycles/mm. This means that the system is now able to resolve finer details of the image. The MTF of the red and blue channels are also improved, but not as much as the green channel. According to Marechal's criteria, for 80\% of contrast we get a resolution of 40 cycles/mm, which is gives a resolution of 12.5 $\mu$m (Shannon's criteria). This is a significant improvement compared to the initial system.
 
+\subsection{Merit function}
+In addition to this frequency analysis, one should use Zemax's optimization tools, and create a custom made merit function on different configuration so as to confirm or even refine this first optimization. Here we define a very basic merit function that we present hereafter.
 
+We use the MTFA operand on each configuration to try to obtain a better result.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Merit funtion.png}
+    \caption{Screen shot of the merit function.}
+    \label{fig:merit-function}
+\end{figure}
 
-
-
-
-
-
-
+\pagebreak
+\section{Conclusion}
+In conclusion, this study demonstrates the process of optimizing a chromatic imaging system using Zemax Optic Studio and Matlab. By adjusting the curvature radius of the optical element and performing a quick focus, we were able to significantly improve the Generalized Depth of Field (GDOF) and the Modulation Transfer Function (MTF) of the system. The optimized system shows enhanced performance in terms of resolving finer details, which is crucial for applications requiring high-resolution imaging. Future work could involve further optimization of the detector position and the use of custom merit functions to refine the system's performance even more.
+\vspace{
+    1cm
+}
 \listoffigures
 
 \end{document} 
