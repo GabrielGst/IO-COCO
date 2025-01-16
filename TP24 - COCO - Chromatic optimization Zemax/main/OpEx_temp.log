@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.16)  16 JAN 2025 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.16)  16 JAN 2025 22:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -567,13 +567,13 @@ Package pdftex.def Info: ../Pictures/matlab_gdof.png  used on input line 231.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-
-[5 <../Pictures/IO25_TP4_GDOF_init_2000_R8.png (PNG copy)>] (OpEx_temp.lof)
+(OpEx_temp.lof)
 \tf@lof=\write4
 \openout4 = `OpEx_temp.lof'.
 
 
+
+[5 <../Pictures/IO25_TP4_GDOF_init_2000_R8.png (PNG copy)>]
 
 [6 <../Pictures/IO25_TP4_optim_R_QF_2000.png (PNG copy)>]
 
@@ -594,7 +594,7 @@ Here is how much of TeX's memory you used:
  1201 hyphenation exceptions out of 8191
  75i,9n,79p,975b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/yohpe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on OpEx_temp.pdf (7 pages, 630369 bytes).
+Output written on OpEx_temp.pdf (7 pages, 630412 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
