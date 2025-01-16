@@ -32,7 +32,7 @@ import ZOSAPI.*;
     %% changes allowed starting from here, do not change above
 
     % change file path 
-    testFile =  '\\domain.iogs\ESO\Home\gabriel.gostiaux\Documents\MATLAB\Données TP4-20241210\add-on-zemax.zmx';
+    testFile =  'S:\Co-conception\TP2-2023\add-on-zemax.zmx';
     
     t=TheSystem.LoadFile(testFile, false);
     
@@ -54,86 +54,29 @@ import ZOSAPI.*;
     spot_setting = spot.GetSettings();
     spot_setting.Field.SetFieldNumber(0);
 
-    % Value of the radius of curvature
-    Surf_2.Radius=25;
-    
-    params = load("scene_params.mat");
-    disp(params.parameters_scene.Readme)
-    object = params.parameters_scene.Distance;
-    %disp(object)
-    n = size(object);
-    n = n(2);
-    % disp(n)
+     % Value of the radius of curvature
+     Surf_2.Radius=25;
 
-    r = [];
-    r0 = [];
-    r1 = [];
-    r2 = [];
-    r3 = [];
-
+    % focus of the green channel at a given depth
+    spot_setting.Wavelength.SetWavelengthNumber(2);
     Surf_0.Thickness = 2000;
     QuickFocus = TheSystem.Tools.OpenQuickFocus();
     QuickFocus.RunAndWaitForCompletion();
     QuickFocus.Close(); 
 
-    for i = 1:1:n
-        
-        % focus of the green channel at a given depth
-        spot_setting.Wavelength.SetWavelengthNumber(2);
-        Surf_0.Thickness = object(i); %2000;
-        % QuickFocus = TheSystem.Tools.OpenQuickFocus();
-        % QuickFocus.RunAndWaitForCompletion();
-        % QuickFocus.Close(); 
-        
-    
-        % change here the value of the wavelength either 1,2 or 3 (0 is for
-        % panchromatic analysis)
-    
-        spot_setting.Wavelength.SetWavelengthNumber(0);
-        spot_setting.ReferTo = ZOSAPI.Analysis.Settings.Spot.Reference.Centroid;
-      
-        % extract RMS spot size for field point
-        spot.ApplyAndWaitForCompletion();
-        spot_results = spot.GetResults();
-        %fprintf('RMS radius (Pan): %6.3f  \n',spot_results.SpotData.GetRMSSpotSizeFor(1,1))
-    
-        r0 = [r0, spot_results.SpotData.GetRMSSpotSizeFor(1,1)];
-    
-        spot_setting.Wavelength.SetWavelengthNumber(1);
-        spot_setting.ReferTo = ZOSAPI.Analysis.Settings.Spot.Reference.Centroid;
-      
-        % extract RMS spot size for field point
-        spot.ApplyAndWaitForCompletion();
-        spot_results = spot.GetResults();
-        %fprintf('RMS radius (Red): %6.3f  \n',spot_results.SpotData.GetRMSSpotSizeFor(1,1))
-    
-        r1 = [r1, spot_results.SpotData.GetRMSSpotSizeFor(1,1)];
-    
-        spot_setting.Wavelength.SetWavelengthNumber(2);
-        spot_setting.ReferTo = ZOSAPI.Analysis.Settings.Spot.Reference.Centroid;
-      
-        % extract RMS spot size for field point
-        spot.ApplyAndWaitForCompletion();
-        spot_results = spot.GetResults();
-        %fprintf('RMS radius (Green): %6.3f  \n',spot_results.SpotData.GetRMSSpotSizeFor(1,1))
-    
-        r2 = [r2, spot_results.SpotData.GetRMSSpotSizeFor(1,1)];
-    
-        spot_setting.Wavelength.SetWavelengthNumber(3);
-        spot_setting.ReferTo = ZOSAPI.Analysis.Settings.Spot.Reference.Centroid;
-      
-        % extract RMS spot size for field point
-        spot.ApplyAndWaitForCompletion();
-        spot_results = spot.GetResults();
-        %fprintf('RMS radius (Blue): %6.3f  \n',spot_results.SpotData.GetRMSSpotSizeFor(1,1))
-    
-        r3 = [r3, spot_results.SpotData.GetRMSSpotSizeFor(1,1)];
+    % change here the value of the wavelength either 1,2 or 3 (0 is for
+    % panchromatic analysis)
 
-    end
-    
-    r = [r0; r1; r2; r3];
-    
-
+    spot_setting.Wavelength.SetWavelengthNumber(1);
+    spot_setting.ReferTo = ZOSAPI.Analysis.Settings.Spot.Reference.Centroid;
+  
+    % extract RMS spot size for field point
+    spot.ApplyAndWaitForCompletion();
+    spot_results = spot.GetResults();
+    fprintf('RMS radius: %6.3f  \n',spot_results.SpotData.GetRMSSpotSizeFor(1,1))
+  
+ 
+    r = [];
 
     %%  do not change below
 end

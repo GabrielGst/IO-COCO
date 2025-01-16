@@ -140,7 +140,11 @@ Thanks to thoses analysis, we can have a first estimate of the chromatic aberrat
     \label{fig:fft-colors}
 \end{figure}
 
-The sensor position considered in this study is $x'_0 = \numprint[m]{2}$. The Spot Diagram figures allow the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue are respectively $RMS_R = \numprint[\mu m]{35.987}$, $RMS_G = \numprint[\mu m]{2.951}$, and $RMS_B = \numprint[\mu m]{37.183}$. Indeed, the system optimizes the focal plane to match the focal plane of the green chanel, as it is the most sensitive for the human eye.
+\paragraph{Initial configuration\\}
+The sensor position considered in this study is $x'_0 = \numprint[mm]{19.160}$. The Spot Diagram figures allow the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue are respectively $RMS_R = \numprint[\mu m]{42.210}$, $RMS_G = \numprint[\mu m]{3.063}$, and $RMS_B = \numprint[\mu m]{57.572}$. Indeed, the system optimizes the focal plane to match the focal plane of the green chanel, as it is the most sensitive for the human eye.
+
+\paragraph{After quick focus\\} \label{manual-qf}
+A quick focus (Optimize > Manual Adjustment > Quick Focus, option “Spot Size Radial” without “Use centroid”) is performed. The new sensor position is $x'_0 = \numprint[mm]{19.103}$. The new Spot Diagrams gives, for red, green, and blue, respectively $RMS_R = \numprint[\mu m]{48.827}$, $RMS_G = \numprint[\mu m]{3.991}$, and $RMS_B = \numprint[\mu m]{50.769}$. However, the overall RMS radius is relatively smaller, from $RMS_{init} = \numprint[\mu m]{41.129}$ to $RMS_{QF} = \numprint[\mu m]{40.633}$.
 
 
 
@@ -148,10 +152,19 @@ The sensor position considered in this study is $x'_0 = \numprint[m]{2}$. The Sp
 
 The function get\textunderscore RMS\textunderscore SpotSize.m was used to directly interface with an instance of Zemax from Matlab to extract the RMS Spot Size. 
 
-This function was modified to retrieve this value for the three channels R, G, and B, for the system with a focus that minimizes the RMS spot size (Quick Focus). The results were obtained for a curvature radius corresponding to the one used in the Zemax file.
+This function was modified to retrieve this value for the three channels R, G, and B, for the system with a focus that minimizes the RMS spot size (Quick Focus). The results were obtained for a curvature radius corresponding to the one used in the Zemax file, which is $R_c= \numprint[mm]{8}$.
 
 \begin{verbatim}
+    % Value of the radius of curvature
+    Surf_2.Radius=8;
+
+    % We look at field 1
+    spot_setting.Field.SetFieldNumber(1);
+
+    % We set the object distance to 2 meters
     Surf_0.Thickness = 2000;
+
+    % We perform a quick focus before retrieving RMS spot values
     QuickFocus = TheSystem.Tools.OpenQuickFocus();
     QuickFocus.RunAndWaitForCompletion();
     QuickFocus.Close();
@@ -161,8 +174,7 @@ This function was modified to retrieve this value for the three channels R, G, a
     r0 = [r0, spot_results.SpotData.GetRMSSpotSizeFor(1,1)];
 \end{verbatim}
 
-here, we first define the object too camera distance, then perform a quick focus and retrieve the RMS radii for the red, green, and blue channels. They were found to be $RMS_R = \numprint[\mu m]{35.987}$, $RMS_G = \numprint[\mu m]{2.951}$, and $RMS_B = \numprint[\mu m]{37.183}$, respectively. This confirms that the system optimizes the focal plane to match the focal plane of the green channel, as it is the most sensitive for the human eye.
-The sensor position considered in this study is $x'_0 = \numprint[mm]{28.9}$. The Spot Diagram fig.\ref{fig:Spot_diagram_2} allows the extraction of RMS values for different colors. At this position, the RMS radii for red, green, and blue are respectively $RMS_R = \numprint[\mu m]{48.942}$, $RMS_G = \numprint[\mu m]{3.999}$, and $RMS_B = \numprint[\mu m]{50.889}$. This values can be compared after applying a quick focus by the software at the same position for the object : $RMS_{R_{bf}} = \numprint[\mu m]{42.330}$, $RMS_{G_{bf}} = \numprint[\mu m]{3.050}$, and $RMS_{B_{bf}} = \numprint[\mu m]{57.688}$, displayed fig.\ref{fig:Spot_diagram_bf}. The best focus affects slighty the green channel, enhances the red channel and degrades the blue one.
+Here, we first define the object to camera distance, then perform a quick focus and retrieve the RMS radii for the red, green, and blue channels. They were found to be $RMS_R = \numprint[\mu m]{41.623}$, $RMS_G = \numprint[\mu m]{4.089}$, and $RMS_B = \numprint[\mu m]{41.557}$, respectively. In the matlab file, the ray density is set to 6 with an hexapolar distribution, while the manual analysis have been performed with a ray density of 9 and dithered distribution, which explain the difference with \ref{manual-qf}.
 
 \begin{figure}[h]
     \centering
@@ -207,12 +219,27 @@ The sensor position considered in this study is $x'_0 = \numprint[mm]{28.9}$. Th
 \end{figure}
 
 \subsection{Performance criterion}
-The performance criterion under optimisation is the Generalized Depth of Field (GDOF), which is defined as the range along the optical axis where the defocus remains below a threshold equivalent to the size of one pixel (5$\mu$m). 
-To evaluate the GDOF, we utilize the Root Mean Square (RMS) Spot Size, derived from the spot diagrams of geometrical ray tracing performed using the software. The RMS Spot Size serves as a metric for quantifying the spatial spread of rays at the image plane. A smaller RMS Spot Size corresponds to tighter convergence of rays, leading to reduced defocus and, consequently, an increased depth of field. 
-The position of the object varies from 1 to 5 meters.
-blue 4.5-60.255 2-37.183
-green 4.5-20.178 2-2.951
-red 4.5-12.892 2-35.987
+The performance criterion under optimisation is the Generalized Depth of Field (GDOF), which is defined as the range along the optical axis where the defocus remains below a threshold equivalent to the size of one pixel (5$\mu$m).
+
+To evaluate the GDOF, we utilize the Root Mean Square (RMS) Spot Size, derived from the spot diagrams of geometrical ray tracing performed using the software. The RMS Spot Size serves as a metric for quantifying the spatial spread of rays at the image plane. A smaller RMS Spot Size corresponds to tighter convergence of rays, leading to reduced defocus and, consequently, an increased depth of field.
+
+\begin{verbatim}
+    % We set the pixel pitch threshold
+    dx = 25; %mm
+    pp = 5.6; %µm
+    
+    threshold = pp * ones(size(object));
+
+    % We compute the GDOF and display it
+    R = result(2,:)<pp;
+    V = result(3,:)<pp;
+    B = result(4,:)<pp;
+    gdof = (sum(R(:) == 1) + sum(V(:) == 1) + sum(B(:) == 1) ) * dx;
+    disp(gdof)
+\end{verbatim}
+
+The computed GDOF is $GDOF = \numprint[mm]{825}$ with quick focus performed for an object at $GDOF = \numprint[m]{2000}$. This value can be also read on ......... .
+
 \section{Optimization for HFR post-processing}
 
 

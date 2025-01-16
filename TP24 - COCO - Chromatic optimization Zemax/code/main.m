@@ -1,15 +1,29 @@
 result = get_RMS_Spot_Size;
 
 params = load("scene_params.mat");
-disp(params.parameters_scene.Readme)
+%disp(params.parameters_scene.Readme)
 object = params.parameters_scene.Distance;
 n = size(object);
 n = n(2);
 
+params_sys = load("system_params.mat");
+%disp(params_sys.parameters_system.Readme)
+radius = params_sys.parameters_system.Radius;
+
 dx = 25; %mm
-pp = 5.6; %µm
+pp = 5.6; %µms
 
 threshold = pp * ones(size(object));
+
+
+
+%plot gdof for all radii
+figure()
+plot(radius(5:15), result)
+title('GDOF for radius curvature');
+xlabel('Radius (mm)');
+ylabel('GDOF(mm)');
+
 
 figure()
 plot(object, result(2,:), 'red')
